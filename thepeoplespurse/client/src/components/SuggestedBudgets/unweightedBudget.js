@@ -14,13 +14,13 @@ function unweightedBudget() {
             value: value === null || value === undefined ? Math.random() * 100 : value
         }));
 
-    const [data, setData] = useState(generateData());
+    const [data, setData] = (generateData());
     const changeData = () => {
         setData(generateData());
     };
 
     return (
-        <div className="App">
+        <div className="unweightedBudget">
             <div>
                 <button onClick={changeData}>Transform</button>
             </div>
@@ -59,4 +59,4 @@ function unweightedBudget() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<unweightedBudget />, rootElement);
