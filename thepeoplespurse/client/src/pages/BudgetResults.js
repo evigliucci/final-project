@@ -1,10 +1,11 @@
 import React from "react";
 import "../assets/styles/budgetResults.css";
+import BudgetSlider from "../components/BudgetSlider/budgetSlider";
 
 const BudgetResults = () => {
   return (
     <main>
-      <h1>BudgetResults Page</h1>
+      <BudgetSlider />
     </main>
   );
 };
