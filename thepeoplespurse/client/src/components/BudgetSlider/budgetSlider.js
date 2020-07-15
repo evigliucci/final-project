@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style.css";
+// import "../assets/styles/budgetResults.css";
 
 function BudgetSlider() {
     return (
