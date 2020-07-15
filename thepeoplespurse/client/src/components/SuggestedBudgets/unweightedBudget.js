@@ -7,16 +7,16 @@ const state = {
           data: [7, 10, 20, 20, 30, 30, 10]
         }],
         backgroundColor: [
-          '#375a94',
-          '#a52fba',
-          '#42ba2f',
-          '#d1c541',
-          '#d141ca',
-          '#5aedeb',
-          '#b33832'
+          'rgba(97, 134, 146)',
+          'rgba(142, 93, 165)',
+          'rgba(249, 141, 109)',
+          'rgba(34, 40, 169)',
+          'rgba(224, 230, 144)',
+          'rgba(229, 168, 247)',
+          'rgba(59, 31, 230)'
         ],
         borderColor: [
-          '#080808'
+          'rgba(57, 249, 202)'
         ],
         borderWidth: 1,
         labels: ['USDA', 'DoD', 'DoE', 'DoL', 'DoS', 'DoHS', 'DoT']
@@ -36,7 +36,7 @@ export default class UnweightedBudget extends React.Component{
           },
           legend:{
             display: true,
-            position: 'top'
+            position: 'right'
           },
           animation: {
           animateScale: true,
