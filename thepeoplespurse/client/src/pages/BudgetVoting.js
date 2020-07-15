@@ -1,11 +1,13 @@
 import React from "react";
 import "../assets/styles/budgetVoting.css";
-import TaxBrackets from "../components/TaxBrackets/TaxBrackets.js"
+import TaxBrackets from "../components/TaxBrackets/TaxBrackets.js";
+import RangeSlider from "../components/RangeSlider/RangeSlider.js";
 
 const BudgetVoting = () => {
   return (
     <main>
       <h1>BudgetVoting Page</h1>
+      <RangeSlider />
       <form>
         <textarea>
           Use the bar chart below to vote. Slide the gray bar from left to right
@@ -67,6 +69,7 @@ const BudgetVoting = () => {
         <div class="Food & Agriculture spending">60%</div>
       </div>
       <TaxBrackets />
+      
     </main>
     
   );
