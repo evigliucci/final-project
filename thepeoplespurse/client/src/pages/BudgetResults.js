@@ -8,8 +8,9 @@ const BudgetResults = () => {
   return (
     <main>
       <h1>BudgetResults Page</h1>
-      <BudgetSlider />
+      
       <UnweightedBudget />
+      <BudgetSlider />
       {/* <BudgetBtns /> */}
     </main>
   );

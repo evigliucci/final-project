@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/styles/budgetVoting.css";
+import TaxBrackets from "../components/TaxBrackets/TaxBrackets.js"
 
 const BudgetVoting = () => {
   return (
@@ -65,7 +66,9 @@ const BudgetVoting = () => {
       <div class="container">
         <div class="Food & Agriculture spending">60%</div>
       </div>
+      <TaxBrackets />
     </main>
+    
   );
 };
 
