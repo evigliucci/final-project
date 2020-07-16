@@ -1,5 +1,5 @@
 import React from 'React';
-// import "../assets/styles/budgetResults.css";
+import "./style.css";
 
 //function calling the component
 function BudgetBtns() {

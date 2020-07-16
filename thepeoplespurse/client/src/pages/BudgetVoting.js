@@ -7,6 +7,7 @@ const BudgetVoting = () => {
   return (
     <main>
       <h1>BudgetVoting Page</h1>
+      <TaxBrackets />
       <RangeSlider />
       <form>
         <textarea>
@@ -68,7 +69,7 @@ const BudgetVoting = () => {
       <div class="container">
         <div class="Food & Agriculture spending">60%</div>
       </div>
-      <TaxBrackets />
+      
       
     </main>
     
