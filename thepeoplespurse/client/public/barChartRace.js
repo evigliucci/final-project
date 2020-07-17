@@ -4,7 +4,7 @@ var top_n = 12;
 var height = 600;
 var width = 954;
 var svg = d3
-  .select("body")
+  .select(".barChartRace")
   .append("svg")
   .attr("width", width)
   .attr("height", height)

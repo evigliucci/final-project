@@ -21,7 +21,7 @@ function Navbar() {
           <ul class="navbar-nav">
             <li class="nav-item active">
               <a class="nav-link" href="/DeptInfo">
-                Educate Yourself!<span class="sr-only">(current)</span>
+                Department Information<span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
