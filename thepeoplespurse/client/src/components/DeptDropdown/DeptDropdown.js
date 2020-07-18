@@ -4,6 +4,7 @@ import "./style.css";
 class DeptDropdown extends Component{
   render(){
     return(
+      <>
       <div class="btn-group">
   <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Get Information for a Government Agency
@@ -33,6 +34,44 @@ class DeptDropdown extends Component{
   </div>
 </div>
 
+
+<div class="list-group">
+  <a class="list-group-item list-group-item-action active">
+     <div class="d-flex w-100 justify-content-between">
+       <h3>Department Name</h3>
+       <h4>abbreviation populated from API call</h4>
+        <img src="..." class="mr-3" alt="..."></img>
+     </div>
+     <p class="mb-1">Short description /mission populated from API call</p>
+     <p>Budget Amount</p>
+     <p href="">link to website of dept</p>
+     {/* <!-- Button trigger modal --> */}
+ <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+   Agency Specific Budget
+ </button>
+
+ {/* <!-- Modal --> */}
+ <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">insert "agency" and budget breakdown</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         this body will be populated with a budget breakdown of each agency by it's components
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+  </a>
+ </div>
+ </>
     )
 }
 }
