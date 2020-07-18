@@ -1,8 +1,9 @@
 import React from "react";
+import "./style.css";
 
 function VoteBtn(){
     return(
-        <a class="btn btn-danger btn-lg btn-block" href="/BudgetVoting">Create Your Own Budget</a>
+        <a id="votebtn" class="btn btn-danger btn-lg btn-block" href="/BudgetVoting">Create Your Own Budget</a>
     )
 }
 
