@@ -1,10 +1,20 @@
 .btn {
-    padding:10px;
-    margin: 10px;
+    padding:25px;
+    margin: 16px;
     align-content: center;
     position: relative;
-    border-color: "#100d4a";
-    border-radius: 2px;
+    border: 2px solid #100d4a;
+    border-radius: 12px;
+    font-size:25px;
+    font-family: 'Rowdies', cursive;
+}
+
+.tax-title{
+    font-size:57px;
+    font-family: 'Rowdies', cursive;
+    margin:10px;
+    padding:10px;
+
 }
 
 

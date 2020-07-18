@@ -19,7 +19,7 @@ const state = {
           'rgba(57, 249, 202)'
         ],
         borderWidth: 1,
-        labels: ['USDA', 'DoD', 'DoE', 'DoL', 'DoS', 'DoHS', 'DoT']
+         labels: ['Dept of State', 'Dept of Defense', 'Dept of Energy', 'Dept of Labor', 'Dept of Agriculture', 'Dept of Homeland Security', 'Dept of Transportation', 'Dept of Energy', 'Dept of Commerce', 'Dept of Defense', 'Dept of Education', 'Dept of Health & Human Services', 'Dept of Housing & Urban Development', 'Dept of Justice', 'Dept of Labor', 'Dept of the Interior', 'Dept of the Treasury', 'Environmental Protection Agency', 'Federal Communication Comission', 'Federal Election Comission', 'Federal Trade Comission', 'Equal Employment Opportunity Comission']
       }
 
 export default class UnweightedBudget extends React.Component{
