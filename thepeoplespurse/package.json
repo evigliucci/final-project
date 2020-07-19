@@ -26,6 +26,7 @@
     "express": "^4.16.3",
     "framer-motion": "^1.11.1",
     "if-env": "^1.0.4",
+    "mongoose": "^5.9.25",
     "react-chartjs-2": "^2.9.0"
   }
 }
