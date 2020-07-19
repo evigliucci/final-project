@@ -3,7 +3,7 @@ import "../assets/styles/home.css";
 import Jumbotron from "../components/Jumbotron/Jumbotron.js";
 import BarChart from "../components/BarChartRace/BarChart.js";
 import data from '../components/BarChartRace/Data';
-
+import NonProfitBanner from '../components/NonProfitBanner/NonProfitBanner';
 
 const Colors = () => {
   const colorOptions = ["#8c1127", "#d92546", "#071a40", "#2a558c", "#5b9ed9"];
@@ -39,6 +39,7 @@ const Home = () => {
     <main>
       <Jumbotron />
 
+      <h3>Historical Government Spending by Agency</h3>
       <div className="barChartRace">
         <BarChart
           start={true}
@@ -69,7 +70,9 @@ const Home = () => {
         />
       </div>
 
-    </main>
+      <h3>Total Federal Spending by Agency 2019</h3>
+      <NonProfitBanner />
+    </main >
   );
 };
 
