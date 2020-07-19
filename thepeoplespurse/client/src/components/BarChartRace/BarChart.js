@@ -1,5 +1,6 @@
 import React from 'react';
 import Bar from './Bar';
+import "./BarChartRace.css";
 
 const classes = {
     barChart: {
@@ -101,11 +102,11 @@ class BarChart extends React.Component {
 
     render() {
         return (
-            <div style={classes.container}>
-                <div style={this.props.timelineStyle}>
+            <div>
+                <div className="barChartRace-title">
                     {this.props.timeline[this.state.idx]}
                 </div>
-                <div style={{ ...classes.barChart, ...this.barChartStyle }}>
+                <div>
                     {
                         Object.keys(this.props.data).map(name => {
                             const [value, hidden, currStyle, prevStyle] = this.getInfoFromRank(name);

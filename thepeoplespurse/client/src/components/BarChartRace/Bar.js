@@ -14,59 +14,30 @@ const classes = {
 
 function Bar(props) {
 
-    // const barDefaultStyle = {
-    //   transition: `all ${props.timeout}ms ease-in-out`,
-    //   ...props.prevStyle,
-    // };
-    // const posDefaultStyle = {
-    //   transition: `all ${props.timeout}ms ease-in-out`,
-    //   marginTop: props.prevStyle.marginTop,
-    // }
-    // const barTransitionStyles = {
-    //     entering: props.prevStyle,
-    //     entered:  props.currStyle,
-    //     exiting: props.currStyle,
-    // };
-    // const posTransitionStyles = {
-    //     entering: {marginTop: props.prevStyle.marginTop},
-    //     entered: {marginTop: props.currStyle.marginTop},
-    //     exiting: {marginTop: props.currStyle.marginTop},
-    // }
-
     const barDefaultStyle = {
         ...props.prevStyle,
     };
-    const posDefaultStyle = {
-        marginTop: props.prevStyle.marginTop,
-    }
     const barTransitionStyles = {
         initial: props.prevStyle,
         animate: props.currStyle,
     };
     const posTransitionStyles = {
-        initial: { marginTop: props.prevStyle.marginTop },
-        animate: { marginTop: props.currStyle.marginTop },
         transition: {
             ease: 'easeInOut',
             duration: props.timeout
         }
     }
     return (
-        <div style={classes.container}>
+        <div>
             <motion.div>
                 <Fragment>
                     <motion.div className="label"
-                        initial={{
-                            ...posDefaultStyle,
-                            yChannelSelector: props.prevStyle.marginTop,
-                        }}
                         animate={{
                             width: `${props.width[0]}%`,
-                            marginTop: props.currStyle.marginTop,
                         }}
                         transition={{
                             ease: 'easeInOut',
-                            duration: 1.25
+                            duration: .25
                         }}
                     >
                         {props.label}
@@ -77,18 +48,15 @@ function Bar(props) {
                         }}
                         transition={{
                             ease: 'easeInOut',
-                            duration: 1.25
+                            duration: 2.25
                         }}
                     >
                         <motion.div
                             initial={{
                                 ...classes.bar,
-                                ...barDefaultStyle,
-                                ...props.prevStyle,
                             }}
                             animate={{
                                 ...classes.bar,
-                                ...barDefaultStyle,
                                 ...props.currStyle,
                             }}
                             transition={{
@@ -98,13 +66,8 @@ function Bar(props) {
                         />
                     </motion.div>
                     <motion.div className="value"
-                        initial={{
-                            ...posDefaultStyle,
-                            marginTop: props.prevStyle.marginTop,
-                        }}
+
                         animate={{
-                            ...posDefaultStyle,
-                            marginTop: props.currStyle.marginTop,
                             width: `${props.width[2]}%`
                         }}
                         transition={{
@@ -112,7 +75,7 @@ function Bar(props) {
                             duration: 1.25
                         }}
                     >
-                        <div style={{ ...props.textBoxStyle }}>
+                        <div>
                             {props.value}
                         </div>
                     </motion.div>
