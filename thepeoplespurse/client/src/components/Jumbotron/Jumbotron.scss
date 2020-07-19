@@ -1,0 +1,29 @@
+.homeHero {
+  background: url(../../assets/images/bg-flag.jpg);
+  background-size: cover;
+  background-position: 50% center;
+  height: calc(100vh - 253px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .mission {
+    background: #d72647;
+    color: #fff;
+    width: 45%;
+    text-align: center;
+    padding: 40px;
+
+    h1 {
+      font-family: Cardo sans-serif;
+      font-size: 44px;
+      padding: 0 0 40px 0;
+    }
+    .button {
+      margin: 0 15px;
+    }
+  }
+  .govSpending {
+    color: #fff;
+  }
+}

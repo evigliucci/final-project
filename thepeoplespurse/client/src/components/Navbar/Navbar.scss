@@ -1,0 +1,20 @@
+.navbar{
+    .navbar-nav ul{
+        display: flex;
+        align-items: center;
+
+        li{ 
+            font-size: 22px;
+            font-weight: 700;
+            padding: 0 15px;
+
+            a{
+                color:#051B41;
+
+                &:hover{ 
+                    color:#D72647;
+                }
+            }
+        }
+    }
+}

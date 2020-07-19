@@ -1,0 +1,23 @@
+.navbar .navbar-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar-nav ul li {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 0 15px;
+}
+
+.navbar .navbar-nav ul li a {
+  color: #051B41;
+}
+
+.navbar .navbar-nav ul li a:hover {
+  color: #D72647;
+}
+/*# sourceMappingURL=Navbar.css.map */
