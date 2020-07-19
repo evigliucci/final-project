@@ -1,25 +1,44 @@
-import React from "react";
-// import "../assets/styles/budgetResults.css";
+import React, { Component } from "react";
 import UnweightedBudget from "../components/SuggestedBudgets/unweightedBudget.js";
 import WeightedBudget from "../components/SuggestedBudgets/weightedBudget.js";
-import BudgetSlider from "../components/BudgetSlider/budgetSlider";
-// import BudgetBtns from "../components/BudgetBtns/BudgetBtns";
+import NavTabs from "../components/SuggestedBudgets/SuggestedBudgetTabs";
 
-const BudgetResults = () => {
-  return (
-    <main>
-      <h1>BudgetResults Page</h1>
+class BudgetResults extends Component {
+  state = {
+    currentChart: "UnweightedBudget"
+  };
 
-      <section className="suggestedSpending">
-        <BudgetSlider />
-        <div className="suggestedSpending-charts">
-          <UnweightedBudget />
-          <WeightedBudget />
-        </div>
-      </section>
-      {/* <BudgetBtns /> */}
-    </main>
-  );
+  handleChartChange = chart => {
+    this.setState({ currentChart: chart });
+  };
+
+  renderChart = () => {
+    if (this.state.currentChart === "UnweightedBudget") {
+      return <UnweightedBudget />;
+    } else {
+      return <WeightedBudget />;
+    }
+  };
+
+
+  render() {
+    return (
+      <main>
+        <h1>Budget Results Page</h1>
+        <section className="suggestedSpending">
+          <div className="suggestedSpending-charts">
+            <div>
+              <NavTabs
+                currentChart={this.state.currentChart}
+                handleChartChange={this.handleChartChange}
+              />
+              {this.renderChart()}
+            </div>
+          </div>
+        </section>
+      </main>
+    );
+  };
 };
 
 export default BudgetResults;
