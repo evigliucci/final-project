@@ -24,7 +24,6 @@ class BudgetResults extends Component {
   render() {
     return (
       <main>
-        <h1>Budget Results Page</h1>
         <section className="suggestedSpending">
           <div className="suggestedSpending-charts">
             <div>

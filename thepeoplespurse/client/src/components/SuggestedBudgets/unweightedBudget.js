@@ -1,19 +1,34 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
+import "./suggestedBudgets.css";
 
 const state = {
   datasets: [{
-    data: [7, 10, 20, 20, 30, 30, 10]
+    data: [7, 10, 20, 20, 30, 30, 10, 7, 10, 20, 20, 30, 30, 10, 7, 10, 20, 20, 30],
+    backgroundColor: [
+      "#051B41",
+      "#28558D",
+      "#5A9EDA",
+      "#8A1127",
+      "#D72647",
+      "#5A9EDA",
+      "#ccc",
+      "#3B3C40",
+      "#A6A6A6",
+      "#051B41",
+      "#28558D",
+      "#5A9EDA",
+      "#8A1127",
+      "#D72647",
+      "#3B3C40",
+      "#ccc",
+      "#A6A6A6",
+      "#051B41",
+      "#28558D",
+      "#5A9EDA",
+      "#8A1127",
+    ],
   }],
-  backgroundColor: [
-    'rgba(97, 134, 146)',
-    'rgba(142, 93, 165)',
-    'rgba(249, 141, 109)',
-    'rgba(34, 40, 169)',
-    'rgba(224, 230, 144)',
-    'rgba(229, 168, 247)',
-    'rgba(59, 31, 230)'
-  ],
   borderColor: [
     'rgba(57, 249, 202)'
   ],
@@ -37,6 +52,10 @@ export default class UnweightedBudget extends React.Component {
               display: true,
               position: 'right'
             },
+            tooltips: {
+              intersect: false,
+            },
+
             animation: {
               animateScale: true,
               animateRotate: true
