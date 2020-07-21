@@ -63,4 +63,10 @@ const voteSchema = new Schema ({
     FederalTradeComission:{
         type: String,
     }
-})
+},
+{
+    timestamps: true
+});
+
+const Vote = mongoose.model("Vote", voteSchema);
+module.exports = Vote;
