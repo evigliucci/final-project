@@ -1,20 +1,21 @@
-.navbar{
-    .navbar-nav ul{
-        display: flex;
-        align-items: center;
+.navbar {
+  border-bottom: 1px solid #051b41;
+  .navbar-nav ul {
+    display: flex;
+    align-items: center;
 
-        li{ 
-            font-size: 22px;
-            font-weight: 700;
-            padding: 0 15px;
+    li {
+      font-size: 16px;
+      font-weight: 700;
+      padding: 8px 15px 0;
 
-            a{
-                color:#051B41;
+      a {
+        color: #051b41;
 
-                &:hover{ 
-                    color:#D72647;
-                }
-            }
+        &:hover {
+          color: #d72647;
         }
+      }
     }
+  }
 }

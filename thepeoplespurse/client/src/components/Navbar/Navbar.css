@@ -1,3 +1,7 @@
+.navbar {
+  border-bottom: 1px solid #051b41;
+}
+
 .navbar .navbar-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,16 +12,16 @@
 }
 
 .navbar .navbar-nav ul li {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
-  padding: 0 15px;
+  padding: 8px 15px 0;
 }
 
 .navbar .navbar-nav ul li a {
-  color: #051B41;
+  color: #051b41;
 }
 
 .navbar .navbar-nav ul li a:hover {
-  color: #D72647;
+  color: #d72647;
 }
 /*# sourceMappingURL=Navbar.css.map */
