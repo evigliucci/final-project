@@ -36,7 +36,7 @@ export default function InputSlider() {
   };
 
   return (
-      <div className={classes.root} id="DoS">
+      <div className={classes.root} id="HUD">
       <Typography id="input-slider" gutterBottom>
         Department of Housing and Urban Development
       </Typography>
