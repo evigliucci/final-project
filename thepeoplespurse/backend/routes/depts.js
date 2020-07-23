@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let depts = require('../models/voteModel');
+let depts = require('../models/voteSchema');
 
 router.route('/').get((req, res) =>{
     depts.find()
