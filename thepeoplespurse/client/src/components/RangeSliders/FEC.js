@@ -36,7 +36,7 @@ export default function InputSlider() {
   };
 
   return (
-      <div className={classes.root} id="DoS">
+      <div className={classes.root} id="FEC">
       <Typography id="input-slider" gutterBottom>
         Federal Election Comission
       </Typography>

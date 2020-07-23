@@ -36,9 +36,9 @@ export default function InputSlider() {
   };
 
   return (
-      <div className={classes.root} id="DoS">
+      <div className={classes.root} id="DoTr">
       <Typography id="input-slider" gutterBottom>
-        Department of Treasurey
+        Department of Treasury
       </Typography>
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>

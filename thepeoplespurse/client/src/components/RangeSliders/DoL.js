@@ -36,7 +36,7 @@ export default function InputSlider() {
   };
 
   return (
-      <div className={classes.root} id="DoS">
+      <div className={classes.root} id="DoL">
       <Typography id="input-slider" gutterBottom>
         Department of Labor
       </Typography>

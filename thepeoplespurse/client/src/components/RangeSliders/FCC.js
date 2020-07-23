@@ -36,7 +36,7 @@ export default function InputSlider() {
   };
 
   return (
-      <div className={classes.root} id="DoS">
+      <div className={classes.root} id="FCC">
       <Typography id="input-slider" gutterBottom>
         Federal Communication Comission
       </Typography>
