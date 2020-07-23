@@ -1,7 +1,7 @@
 import React from 'react';
 import Bar from './Bar';
 import "./BarChartRace.css";
-import API from "../../utils/API";
+import API from "../../utils/axiosCalls";
 
 const classes = {
     barChart: {
