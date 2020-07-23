@@ -1,6 +1,7 @@
 import React from 'react';
 import Bar from './Bar';
 import "./BarChartRace.css";
+import API from "../../utils/API";
 
 const classes = {
     barChart: {
@@ -11,7 +12,27 @@ const classes = {
         width: "100%",
     }
 }
+
 class BarChart extends React.Component {
+    state = {
+        results: []
+    };
+
+    getHomeAgencyInfo = () => {
+        API.getHomeAgencyInfo()
+            // .then(res => this.setState({ results: res.data.data }))
+            .then(function (response) {
+                console.log(response);
+                this.setState({ results: response.data.data })
+            })
+            .catch(err => console.log(err));
+    };
+
+    handleRaceButtonClick = event => {
+        //event.preventDefault();
+        this.getHomeAgencyInfo();
+    };
+
     constructor(props) {
         super(props);
         this.barHeight = `calc(${props.barStyle.height} + ${props.barStyle.marginTop})`;
@@ -127,6 +148,7 @@ class BarChart extends React.Component {
                         })
                     }
                 </div>
+                <button onClick={this.handleRaceButtonClick}>Start Race!</button>
             </div>
         );
     }
