@@ -14,6 +14,8 @@ router.route('/add').post((req,res) =>{
         .catch(err => res.status(400).json('Error: ') + err);
 });
 
+
+
 //beginning to build out functions to pull tax bracket information and post it into the tax bracket count
 function populateBrackets(){
     const bracket = document.getElementById("tax1")
@@ -41,5 +43,9 @@ function populateDepts(){
     agriculture.post(bracket.value)
 }
 
+//increments the department value based off of the bracket value
+db.budgetVotes.update({
+    $inc: {bracket_1: value}
+})
 
 module.exports = router;
