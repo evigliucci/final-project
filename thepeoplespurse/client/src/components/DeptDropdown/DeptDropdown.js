@@ -19,8 +19,8 @@ class DeptDropdown extends Component {
             <a className="dropdown-item" id="069" href="#">Dept of Transportation</a>
             <a className="dropdown-item" id="013" href="#">Dept of Commerce</a>
             <a className="dropdown-item" id="091" href="#">Dept of Education</a>
-            <a className="dropdown-item" id="075" href="#">Dept of Health & Human Services</a>
-            <a className="dropdown-item" id="086" href="#">Dept of Housing & Urban Development</a>
+            <a className="dropdown-item" id="075" href="#">Dept of Health and Human Services</a>
+            <a className="dropdown-item" id="086" href="#">Dept of Housing and Urban Development</a>
             <a className="dropdown-item" id="015" href="#">Dept of Justice</a>
             <a className="dropdown-item" id="014" href="#">Dept of the Interior</a>
             <a className="dropdown-item" id="020" href="#">Dept of the Treasury</a>
@@ -29,6 +29,7 @@ class DeptDropdown extends Component {
             <a className="dropdown-item" id="360" href="#">Federal Election Comission</a>
             <a className="dropdown-item" id="029" href="#">Federal Trade Comission</a>
             <a className="dropdown-item" id="045" href="#">Equal Employment Opportunity Comission</a>
+            <a className="dropdown-item" id="028" href="#">Social Security</a>
             <div className="dropdown-divider"></div>
             <a className="dropdown-item" id="getAll" href="#">Get Information for All Agencies</a>
           </div>

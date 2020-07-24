@@ -17,10 +17,95 @@ const useStyles = makeStyles({
 
 export default function InputSlider() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(30);
 
+  const [value, setValue] = React.useState(3);
    const handleSliderChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const [value2, setValue2] = React.useState(1);
+  const handleSliderChange2 = (event, newValue2) => {
+    setValue2(newValue2);
+  };
+
+  const [value3, setValue3] = React.useState(19);
+  const handleSliderChange3 = (event, newValue3) => {
+    setValue3(newValue3);
+  };
+
+  const [value4, setValue4] = React.useState(1);
+  const handleSliderChange4 = (event, newValue4) => {
+    setValue4(newValue4);
+  };
+
+  const [value5, setValue5] = React.useState(1);
+  const handleSliderChange5 = (event, newValue5) => {
+    setValue5(newValue5);
+  };
+  
+  const [value6, setValue6] = React.useState(28);
+  const handleSliderChange6 = (event, newValue6) => {
+    setValue6(newValue6);
+  };
+
+  const [value7, setValue7] = React.useState(2);
+  const handleSliderChange7 = (event, newValue7) => {
+    setValue7(newValue7);
+  };
+
+  const [value8, setValue8] = React.useState(1);
+  const handleSliderChange8 = (event, newValue8) => {
+    setValue8(newValue8);
+  };
+
+  const [value9, setValue9] = React.useState(1);
+  const handleSliderChange9 = (event, newValue9) => {
+    setValue9(newValue9);
+  };
+
+  const [value10, setValue10] = React.useState(1);
+  const handleSliderChange10 = (event, newValue10) => {
+    setValue10(newValue10);
+  };
+
+  const [value11, setValue11] = React.useState(2);
+  const handleSliderChange11 = (event, newValue11) => {
+    setValue11(newValue11);
+  };
+
+  const [value12, setValue12] = React.useState(17);
+  const handleSliderChange12 = (event, newValue12) => {
+    setValue12(newValue12);
+  };
+
+  const [value13, setValue13] = React.useState(1);
+  const handleSliderChange13 = (event, newValue13) => {
+    setValue13(newValue13);
+  };
+
+  const [value14, setValue14] = React.useState(1);
+  const handleSliderChange14 = (event, newValue14) => {
+    setValue14(newValue14);
+  };
+
+  const [value15, setValue15] = React.useState(1);
+  const handleSliderChange15 = (event, newValue15) => {
+    setValue15(newValue15);
+  };
+
+  const [value16, setValue16] = React.useState(1);
+  const handleSliderChange16 = (event, newValue16) => {
+    setValue16(newValue16);
+  };
+
+  const [value17, setValue17] = React.useState(1);
+  const handleSliderChange17 = (event, newValue17) => {
+    setValue17(newValue17);
+  };
+
+  const [value18, setValue18] = React.useState(18);
+  const handleSliderChange18 = (event, newValue18) => {
+    setValue18(newValue18);
   };
 
   const handleBlur = () => {
@@ -56,8 +141,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value2 === 'number' ? value2 : 0}
+            onChange={handleSliderChange2}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -71,8 +156,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value3 === 'number' ? value3 : 0}
+            onChange={handleSliderChange3}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -86,8 +171,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value4 === 'number' ? value4 : 0}
+            onChange={handleSliderChange4}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -101,8 +186,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value5 === 'number' ? value5 : 0}
+            onChange={handleSliderChange5}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -116,8 +201,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value6 === 'number' ? value6 : 0}
+            onChange={handleSliderChange6}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -131,8 +216,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value7 === 'number' ? value7 : 0}
+            onChange={handleSliderChange7}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -146,8 +231,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value8 === 'number' ? value8 : 0}
+            onChange={handleSliderChange8}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -161,8 +246,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value9 === 'number' ? value9 : 0}
+            onChange={handleSliderChange9}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -176,8 +261,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value10 === 'number' ? value10 : 0}
+            onChange={handleSliderChange10}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -191,8 +276,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value11 === 'number' ? value11 : 0}
+            onChange={handleSliderChange11}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -206,8 +291,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value12 === 'number' ? value12 : 0}
+            onChange={handleSliderChange12}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -221,8 +306,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value13 === 'number' ? value13 : 0}
+            onChange={handleSliderChange13}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -236,8 +321,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value14 === 'number' ? value14 : 0}
+            onChange={handleSliderChange14}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -251,8 +336,8 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value15 === 'number' ? value15 : 0}
+            onChange={handleSliderChange15}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -267,8 +352,8 @@ export default function InputSlider() {
         <Grid item xs>
           <Slider
             id="FTC"
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value16 === 'number' ? value16 : 0}
+            onChange={handleSliderChange16}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />
@@ -283,8 +368,24 @@ export default function InputSlider() {
         <Grid item xs>
           <Slider
             id="HUD"
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
+            value={typeof value17 === 'number' ? value17 : 0}
+            onChange={handleSliderChange17}
+            aria-labelledby="input-slider"
+            valueLabelDisplay="on"
+          />
+        </Grid>
+    </Grid>
+    </div>
+    <div className={classes.root} >
+      <Typography id="input-slider" gutterBottom>
+        Social Security
+      </Typography>
+      <Grid container spacing={2} alignItems="center">
+        <Grid item xs>
+          <Slider
+            id="SS"
+            value={typeof value18 === 'number' ? value18 : 0}
+            onChange={handleSliderChange18}
             aria-labelledby="input-slider"
             valueLabelDisplay="on"
           />

@@ -28,13 +28,23 @@ class VoteBtn extends Component {
             const hud = document.querySelectorAll("#HUD input")[0].value
             console.log(agriculture)
             console.log(fec);
+            console.log(ftc)
+            console.log(hud)
+            console.log(fcc)
+            console.log(epa)
+            console.log(treasury)
+            console.log(transportation)
+            console.log(state)
+            console.log(labor)
+            console.log(interior)
+            console.log(homeland)
         }
         populateDepts();
       }
     render(){
     return(
         <div>
-<button type="button" class="btn btn-primary btn-lg" onClick={this.handleClick}>Large button</button>
+<button type="button" class="btn btn-primary btn-lg" onClick={this.handleClick}>Submit Your Budget!</button>
         </div>
         
     )
