@@ -4,7 +4,7 @@ var cors = require('cors');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 //need to rename to fit with schema, etc
-const Data = require('./data');
+const voteSchema = require('./models/voteSchema');
 
 const API_PORT = 3001;
 const app = express();
