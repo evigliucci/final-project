@@ -23,10 +23,6 @@ export default function InputSlider() {
     setValue(newValue);
   };
 
-  const handleInputChange = (event) => {
-    setValue(event.target.value === '' ? '' : Number(event.target.value));
-  };
-
   const handleBlur = () => {
     if (value < 0) {
       setValue(0);
@@ -37,13 +33,14 @@ export default function InputSlider() {
    
   return (
       <>
-      <div className={classes.root} id="DoA">
+      <div className={classes.root}>
       <Typography id="input-slider" gutterBottom>
         Department of Agriculture
       </Typography>
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
+            id="DoA"
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
             aria-labelledby="input-slider"
@@ -262,13 +259,14 @@ export default function InputSlider() {
         </Grid>
     </Grid>
     </div>
-    <div className={classes.root} id="FTC">
+    <div className={classes.root} >
       <Typography id="input-slider" gutterBottom>
         Federal Trade Comission
       </Typography>
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
+            id="FTC"
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
             aria-labelledby="input-slider"
@@ -277,13 +275,14 @@ export default function InputSlider() {
         </Grid>
     </Grid>
     </div>
-    <div className={classes.root} id="HUD">
+    <div className={classes.root} >
       <Typography id="input-slider" gutterBottom>
         Department of Housing and Urban Development
       </Typography>
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
+            id="HUD"
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
             aria-labelledby="input-slider"

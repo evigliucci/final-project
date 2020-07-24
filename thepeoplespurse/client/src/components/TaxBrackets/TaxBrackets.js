@@ -2,6 +2,17 @@ import React from 'react';
 import "./style.css";
 
 function TaxBrackets() {
+    //beginning to build out functions to pull tax bracket information and post it into the tax bracket count
+// function populateBrackets(){
+//     const bracket = document.getElementById("tax1")
+//     bracket.onclick(post(tax_bracket_count,[
+//         bracket_1 ++
+//     ]))
+//     bracket.post(tax_bracket_count,[
+//         bracket_1 ++
+//     ])
+// }
+
     return(
         <div class="text-center">
             <h1 class="tax-title">Select Your Tax Bracket to Vote!</h1>
@@ -13,6 +24,7 @@ function TaxBrackets() {
             <button type="button" class="btn btn-danger btn-lg" id="tax6">$414,701 to $622,050</button>
             <button type="button" class="btn btn-primary btn-lg" id="tax7">Over $622,050</button>
         </div>
+        
     )
 }
 

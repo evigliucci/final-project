@@ -21,6 +21,7 @@ import TaxBrackets from "../components/TaxBrackets/TaxBrackets.js";
 // import HUD from "../components/RangeSliders/HUD.js";
 // import VA from "../components/RangeSliders/VA.js";
 import BudgetSliders from "../components/RangeSliders/RangeSliders.js"
+import VoteBtn from "../components/VoteBtn/VoteBtn";
 
 const BudgetVoting = () => {
   return (
@@ -28,26 +29,7 @@ const BudgetVoting = () => {
       <h1>BudgetVoting Page</h1>
         <TaxBrackets />
         <BudgetSliders />
-      {/* <TaxBrackets />
-      <DoA />
-      <DoC />
-      <DoD />
-      <DoE />
-      <DoEd />
-      <DoHHS />
-      <DoHS />
-      <DoI />
-      <DoJ />
-      <DoL />
-      <DoS />
-      <DoT />
-      <DoTr />
-      <EPA />
-      <FCC />
-      <FEC />
-      <FTC />
-      <HUD />
-      <VA /> */}
+        <VoteBtn />
       <form>
         <textarea>
           Use the bar chart below to vote. Slide the gray bar from left to right

@@ -40,3 +40,5 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/thepeoplespurse
   useNewUrlParser: true,
   useFindAndModify: false
 });
+
+require("./backend/routes")(app);
