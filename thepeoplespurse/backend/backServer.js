@@ -54,3 +54,17 @@ app.use('/api', router);
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+
+app.post(id, (req,res) => {
+  const bracket = {id};
+  console.log(bracket);
+  console.log(db);
+
+  db.collection('budgetVotes').save(id, (err, result) => {
+    if (err) {
+      return console.log(err);
+    }
+    console.log('bracket added to db');
+    res.sendStatus(201);
+  });
+});

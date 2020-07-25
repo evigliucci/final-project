@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import "./style.css";
 
 class TaxBrackets extends Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
+        this.state = { 
+            tax_bracket_count: '',
+        }
     }
     handleClick(event) {
         const id = event.target.id;
@@ -14,6 +18,18 @@ class TaxBrackets extends Component {
             allBrackets[i].classList.remove('active')
         }
         selected.classList.add("active");
+        const bracketObject = {
+            tax_bracket_count: event.target.id
+        }
+
+        axios.post('http://localhost:3000/vote', bracketObject)
+            .then((res) => {
+                console.log(res.data)
+            }).catch((error) =>{
+                console.log(error)
+            });
+
+        this.setState({ tax_bracket_count:' '});
     }
     render() {
         return (
@@ -32,3 +48,4 @@ class TaxBrackets extends Component {
 }
 
 export default TaxBrackets;
+

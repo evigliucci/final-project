@@ -159,7 +159,7 @@ const voteSchema = new Schema({
         required: true,
     }
     ],
-    education: [
+    energy: [
         // bracket_1, 
         {
             type: Number,
@@ -196,7 +196,7 @@ const voteSchema = new Schema({
             required: true,
         }
     ],
-    energy: [
+    education: [
        // bracket_1, 
        {
         type: Number,
@@ -307,7 +307,7 @@ const voteSchema = new Schema({
             required: true,
         }
     ],
-    housing_urban_development: [
+    interior: [
         // bracket_1, 
         {
             type: Number,
@@ -343,43 +343,6 @@ const voteSchema = new Schema({
             type: Number,
             required: true,
         }
-    ],
-    justice: [
-       // bracket_1, 
-       {
-        type: Number,
-        required: true,
-    },
-    // bracket_2, 
-    {
-        type: Number,
-        required: true,
-    },
-    // bracket_3, 
-    {
-        type: Number,
-        required: true,
-    },
-    // bracket_4, 
-    {
-        type: Number,
-        required: true,
-    },
-    // bracket_5, 
-    {
-        type: Number,
-        required: true,
-    },
-    // bracket_6
-    {
-        type: Number,
-        required: true,
-    },
-    // bracket_7 
-    {
-        type: Number,
-        required: true,
-    }
     ],
     labor: [
        // bracket_1, 
@@ -456,117 +419,6 @@ const voteSchema = new Schema({
     }
     ],
     transportation: [
-        // bracket_1, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_2, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_3, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_4, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_5, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_6
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_7 
-        {
-            type: Number,
-            required: true,
-        }
-    ],
-    veterans_affairs: [
-        // bracket_1, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_2, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_3, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_4, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_5, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_6
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_7 
-        {
-            type: Number,
-            required: true,
-        }
-    ],
-    interior: [
-        // bracket_1, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_2, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_3, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_4, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_5, 
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_6
-        {
-            type: Number,
-            required: true,
-        },
-        // bracket_7 
-        {
-            type: Number,
-            required: true,
-        }
-    ],
-    treasury: [
        // bracket_1, 
        {
         type: Number,
@@ -603,7 +455,7 @@ const voteSchema = new Schema({
         required: true,
     }
     ],
-    environmental_protection: [
+    treasury: [
         // bracket_1, 
         {
             type: Number,
@@ -640,7 +492,7 @@ const voteSchema = new Schema({
             required: true,
         }
     ],
-    equal_employment: [
+    environmental_protection: [
         // bracket_1, 
         {
             type: Number,
@@ -715,6 +567,43 @@ const voteSchema = new Schema({
         }
     ],
     election: [
+       // bracket_1, 
+       {
+        type: Number,
+        required: true,
+    },
+    // bracket_2, 
+    {
+        type: Number,
+        required: true,
+    },
+    // bracket_3, 
+    {
+        type: Number,
+        required: true,
+    },
+    // bracket_4, 
+    {
+        type: Number,
+        required: true,
+    },
+    // bracket_5, 
+    {
+        type: Number,
+        required: true,
+    },
+    // bracket_6
+    {
+        type: Number,
+        required: true,
+    },
+    // bracket_7 
+    {
+        type: Number,
+        required: true,
+    }
+    ],
+    trade: [
         // bracket_1, 
         {
             type: Number,
@@ -751,7 +640,7 @@ const voteSchema = new Schema({
             required: true,
         }
     ],
-    trade: [
+    housing_urban_development: [
         // bracket_1, 
         {
             type: Number,
@@ -824,11 +713,161 @@ const voteSchema = new Schema({
             type: Number,
             required: true,
         }
+    ],
+    justice: [
+        // bracket_1, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_2, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_3, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_4, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_5, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_6
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_7 
+        {
+            type: Number,
+            required: true,
+        }
+    ],
+    NASA: [
+        // bracket_1, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_2, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_3, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_4, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_5, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_6
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_7 
+        {
+            type: Number,
+            required: true,
+        }
+    ],
+    veterans_affairs: [
+        // bracket_1, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_2, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_3, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_4, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_5, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_6
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_7 
+        {
+            type: Number,
+            required: true,
+        }
+    ],
+    equal_employment: [
+        // bracket_1, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_2, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_3, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_4, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_5, 
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_6
+        {
+            type: Number,
+            required: true,
+        },
+        // bracket_7 
+        {
+            type: Number,
+            required: true,
+        }
     ]
 },
     {
         timestamps: true
+    },{
+        collection: 'budgetVotes'
     });
 
-    module.exports = mongoose.model('voteSchema', voteSchema);
+    module.exports = mongoose.model('Vote', voteSchema);
 
