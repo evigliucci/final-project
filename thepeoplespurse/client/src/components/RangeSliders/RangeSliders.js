@@ -19,7 +19,7 @@ export default function InputSlider() {
   const classes = useStyles();
 
   const [value, setValue] = React.useState(3);
-   const handleSliderChange = (event, newValue) => {
+  const handleSliderChange = (event, newValue) => {
     setValue(newValue);
   };
 
@@ -42,7 +42,7 @@ export default function InputSlider() {
   const handleSliderChange5 = (event, newValue5) => {
     setValue5(newValue5);
   };
-  
+
   const [value6, setValue6] = React.useState(28);
   const handleSliderChange6 = (event, newValue6) => {
     setValue6(newValue6);
@@ -103,296 +103,387 @@ export default function InputSlider() {
     setValue17(newValue17);
   };
 
-  const [value18, setValue18] = React.useState(18);
+  const [value18, setValue18] = React.useState(10);
   const handleSliderChange18 = (event, newValue18) => {
     setValue18(newValue18);
   };
 
+
+  const [value19, setValue19] = React.useState(2);
+  const handleSliderChange19 = (event, newValue19) => {
+    setValue18(newValue19);
+  };
+
+  const [value20, setValue20] = React.useState(3);
+  const handleSliderChange20 = (event, newValue20) => {
+    setValue20(newValue20);
+  };
+
+  const [value21, setValue21] = React.useState(2);
+  const handleSliderChange21 = (event, newValue21) => {
+    setValue21(newValue21);
+  };
+
+  const [value22, setValue22] = React.useState(1);
+  const handleSliderChange22 = (event, newValue22) => {
+    setValue22(newValue22);
+  };
   const handleBlur = () => {
     if (value < 0) {
       setValue(0);
     } else if (value > 100) {
       setValue(100);
     }
-};
-   
+  };
+
   return (
-      <>
+    <>
       <div className={classes.root}>
-      <Typography id="input-slider" gutterBottom>
-        Department of Agriculture
+        <Typography id="input-slider" gutterBottom>
+          Department of Agriculture
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            id="DoA"
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              id="DoA"
+              value={typeof value === 'number' ? value : 0}
+              onChange={handleSliderChange}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoC">
-      <Typography id="input-slider" gutterBottom>
-        Department of Commerce
+      </div>
+      <div className={classes.root} id="DoC">
+        <Typography id="input-slider" gutterBottom>
+          Department of Commerce
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value2 === 'number' ? value2 : 0}
-            onChange={handleSliderChange2}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value2 === 'number' ? value2 : 0}
+              onChange={handleSliderChange2}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoD">
-      <Typography id="input-slider" gutterBottom>
-        Department of Defense
+      </div>
+      <div className={classes.root} id="DoD">
+        <Typography id="input-slider" gutterBottom>
+          Department of Defense
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value3 === 'number' ? value3 : 0}
-            onChange={handleSliderChange3}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value3 === 'number' ? value3 : 0}
+              onChange={handleSliderChange3}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoE">
-      <Typography id="input-slider" gutterBottom>
-        Department of Energy
+      </div>
+      <div className={classes.root} id="DoE">
+        <Typography id="input-slider" gutterBottom>
+          Department of Energy
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value4 === 'number' ? value4 : 0}
-            onChange={handleSliderChange4}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value4 === 'number' ? value4 : 0}
+              onChange={handleSliderChange4}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoEd">
-      <Typography id="input-slider" gutterBottom>
-        Department of Education
+      </div>
+      <div className={classes.root} id="DoEd">
+        <Typography id="input-slider" gutterBottom>
+          Department of Education
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value5 === 'number' ? value5 : 0}
-            onChange={handleSliderChange5}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value5 === 'number' ? value5 : 0}
+              onChange={handleSliderChange5}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoHHS">
-      <Typography id="input-slider" gutterBottom>
-        Department of Health and Human Services
+      </div>
+      <div className={classes.root} id="DoHHS">
+        <Typography id="input-slider" gutterBottom>
+          Department of Health and Human Services
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value6 === 'number' ? value6 : 0}
-            onChange={handleSliderChange6}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value6 === 'number' ? value6 : 0}
+              onChange={handleSliderChange6}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoHS">
-      <Typography id="input-slider" gutterBottom>
-        Department of Homeland Security
+      </div>
+      <div className={classes.root} id="DoHS">
+        <Typography id="input-slider" gutterBottom>
+          Department of Homeland Security
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value7 === 'number' ? value7 : 0}
-            onChange={handleSliderChange7}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value7 === 'number' ? value7 : 0}
+              onChange={handleSliderChange7}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoI">
-      <Typography id="input-slider" gutterBottom>
-        Department of the Interior
+      </div>
+      <div className={classes.root} id="DoI">
+        <Typography id="input-slider" gutterBottom>
+          Department of the Interior
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value8 === 'number' ? value8 : 0}
-            onChange={handleSliderChange8}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value8 === 'number' ? value8 : 0}
+              onChange={handleSliderChange8}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoL">
-      <Typography id="input-slider" gutterBottom>
-        Department of Labor
+      </div>
+      <div className={classes.root} id="DoL">
+        <Typography id="input-slider" gutterBottom>
+          Department of Labor
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value9 === 'number' ? value9 : 0}
-            onChange={handleSliderChange9}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value9 === 'number' ? value9 : 0}
+              onChange={handleSliderChange9}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoS">
-      <Typography id="input-slider" gutterBottom>
-        Department of State
+      </div>
+      <div className={classes.root} id="DoS">
+        <Typography id="input-slider" gutterBottom>
+          Department of State
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value10 === 'number' ? value10 : 0}
-            onChange={handleSliderChange10}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value10 === 'number' ? value10 : 0}
+              onChange={handleSliderChange10}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoT">
-      <Typography id="input-slider" gutterBottom>
-        Department of Transportation
+      </div>
+      <div className={classes.root} id="DoT">
+        <Typography id="input-slider" gutterBottom>
+          Department of Transportation
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value11 === 'number' ? value11 : 0}
-            onChange={handleSliderChange11}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value11 === 'number' ? value11 : 0}
+              onChange={handleSliderChange11}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="DoTr">
-      <Typography id="input-slider" gutterBottom>
-        Department of Treasury
+      </div>
+      <div className={classes.root} id="DoTr">
+        <Typography id="input-slider" gutterBottom>
+          Department of Treasury
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value12 === 'number' ? value12 : 0}
-            onChange={handleSliderChange12}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value12 === 'number' ? value12 : 0}
+              onChange={handleSliderChange12}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="EPA">
-      <Typography id="input-slider" gutterBottom>
-        Environmental Protection Agency
+      </div>
+      <div className={classes.root} id="EPA">
+        <Typography id="input-slider" gutterBottom>
+          Environmental Protection Agency
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value13 === 'number' ? value13 : 0}
-            onChange={handleSliderChange13}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value13 === 'number' ? value13 : 0}
+              onChange={handleSliderChange13}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="FCC">
-      <Typography id="input-slider" gutterBottom>
-        Federal Communication Comission
+      </div>
+      <div className={classes.root} id="FCC">
+        <Typography id="input-slider" gutterBottom>
+          Federal Communication Comission
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value14 === 'number' ? value14 : 0}
-            onChange={handleSliderChange14}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value14 === 'number' ? value14 : 0}
+              onChange={handleSliderChange14}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} id="FEC">
-      <Typography id="input-slider" gutterBottom>
-        Federal Election Comission
+      </div>
+      <div className={classes.root} id="FEC">
+        <Typography id="input-slider" gutterBottom>
+          Federal Election Comission
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            value={typeof value15 === 'number' ? value15 : 0}
-            onChange={handleSliderChange15}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              value={typeof value15 === 'number' ? value15 : 0}
+              onChange={handleSliderChange15}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} >
-      <Typography id="input-slider" gutterBottom>
-        Federal Trade Comission
+      </div>
+
+      <div className={classes.root} >
+        <Typography id="input-slider" gutterBottom>
+          Federal Trade Comission
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            id="FTC"
-            value={typeof value16 === 'number' ? value16 : 0}
-            onChange={handleSliderChange16}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              id="FTC"
+              value={typeof value16 === 'number' ? value16 : 0}
+              onChange={handleSliderChange16}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} >
-      <Typography id="input-slider" gutterBottom>
-        Department of Housing and Urban Development
+      </div>
+
+      <div className={classes.root} >
+        <Typography id="input-slider" gutterBottom>
+          Department of Housing and Urban Development
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            id="HUD"
-            value={typeof value17 === 'number' ? value17 : 0}
-            onChange={handleSliderChange17}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              id="HUD"
+              value={typeof value17 === 'number' ? value17 : 0}
+              onChange={handleSliderChange17}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
-    <div className={classes.root} >
-      <Typography id="input-slider" gutterBottom>
-        Social Security
+      </div>
+
+      <div className={classes.root} >
+        <Typography id="input-slider" gutterBottom>
+          Social Security
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            id="SS"
-            value={typeof value18 === 'number' ? value18 : 0}
-            onChange={handleSliderChange18}
-            aria-labelledby="input-slider"
-            valueLabelDisplay="on"
-          />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              id="SS"
+              value={typeof value18 === 'number' ? value18 : 0}
+              onChange={handleSliderChange18}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
         </Grid>
-    </Grid>
-    </div>
+      </div>
+
+      <div className={classes.root} >
+        <Typography id="input-slider" gutterBottom>
+          Department of Justice
+      </Typography>
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              id="DOJ"
+              value={typeof value19 === 'number' ? value19 : 0}
+              onChange={handleSliderChange19}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
+        </Grid>
+      </div>
+
+      <div className={classes.root} >
+        <Typography id="input-slider" gutterBottom>
+          National Aeronautics and Space Administration
+      </Typography>
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              id="NASA"
+              value={typeof value20 === 'number' ? value20 : 0}
+              onChange={handleSliderChange20}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
+        </Grid>
+      </div>
+
+      <div className={classes.root} >
+        <Typography id="input-slider" gutterBottom>
+          Department of Veterans Affairs
+      </Typography>
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              id="DOVA"
+              value={typeof value21 === 'number' ? value21 : 0}
+              onChange={handleSliderChange21}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
+        </Grid>
+      </div>
+
+      <div className={classes.root} >
+        <Typography id="input-slider" gutterBottom>
+          Equal Opportunity Employment Commission
+      </Typography>
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              id="EOEC"
+              value={typeof value22 === 'number' ? value22 : 0}
+              onChange={handleSliderChange22}
+              aria-labelledby="input-slider"
+              valueLabelDisplay="on"
+            />
+          </Grid>
+        </Grid>
+      </div>
     </>
-     );
-  }
+  );
+}
 

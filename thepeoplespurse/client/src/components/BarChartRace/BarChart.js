@@ -1,155 +1,70 @@
 import React from 'react';
-import Bar from './Bar';
-import "./BarChartRace.css";
 import API from "../../utils/axiosCalls";
+import { Bar } from 'react-chartjs-2';
 
-const classes = {
-    barChart: {
-        width: "100%",
-        position: "relative",
-    },
-    container: {
-        width: "100%",
-    }
+const state = {
+    labels: [
+        'Department of Health and Human Services',
+        'Department of Defense',
+        'Social Security Administration',
+        'Department of the Treasury',
+        'Department of Veterans Affairs',
+        'Department of Agriculture',
+        'Office of Personnel Management',
+        'Department of Homeland Security',
+        'Department of Education'
+    ],
+    datasets: [
+        {
+            label: 'Dollars',
+            backgroundColor: 'rgba(75,192,192,1)',
+            borderColor: 'rgba(0,0,0,1)',
+            borderWidth: 2,
+            data: [945677774172, 629424896012, 606454436574, 580584099932, 117104778676, 112715655815, 106956326872, 44143415056, 42402568825, 39180908739]
+        }
+    ]
 }
 
 class BarChart extends React.Component {
-    state = {
-        results: []
-    };
-
-    getHomeAgencyInfo = () => {
+    componentDidMount() {
         API.getHomeAgencyInfo()
-            // .then(res => this.setState({ results: res.data.data }))
             .then(function (response) {
-                console.log(response);
-                this.setState({ results: response.data.data })
+                const results = response.data.results;
+                const data = [];
+                const labels = [];
+
+                for (var prop in results) {
+                    var name = results[prop].name;
+                    var amount = results[prop].gross_outlay_amount;
+                    labels.push(name);
+                    data.push(amount);
+                }
+                console.log(labels);
+
             })
             .catch(err => console.log(err));
-    };
-
-    handleRaceButtonClick = event => {
-        //event.preventDefault();
-        this.getHomeAgencyInfo();
-    };
-
-    constructor(props) {
-        super(props);
-        this.barHeight = `calc(${props.barStyle.height} + ${props.barStyle.marginTop})`;
-        this.nItmes = Object.keys(this.props.data).length;
-        this.maxItems = props.maxItems <= this.nItmes ? props.maxItems : this.nItmes;
-        this.barChartStyle = {
-            height: `calc(${this.maxItems} * ${this.barHeight})`,
-        };
-        let [initRank, maxVal] = this.sortAxis(0);
-        this.state = {
-            idx: 0,
-            prevRank: initRank,
-            currRank: initRank,
-            maxVal: maxVal,
-            started: props.start
-        };
     }
 
-    componentDidMount = () => {
-        if (this.props.start) {
-            var intervalId = setInterval(this.update, this.props.timeout + this.props.delay);
-            this.setState({ intervalId: intervalId });
-        }
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.start) {
-            var intervalId = setInterval(this.update, this.props.timeout + this.props.delay);
-            this.setState({ intervalId: intervalId });
-        }
-    }
-
-    componentWillUnmount = () => {
-        clearInterval(this.state.intervalId);
-    }
-
-    update = () => {
-        if (this.state.idx + 1 === this.props.timeline.length) {
-            clearInterval(this.state.intervalId);
-            return;
-        }
-        this.setState(prevState => {
-            let [currRank, maxVal] = this.sortAxis(prevState.idx + 1);
-            return {
-                idx: prevState.idx + 1,
-                prevRank: prevState.currRank,
-                currRank: currRank,
-                maxVal: maxVal,
-            }
-        });
-    }
-
-    sortAxis = (i, descending) => {
-        if (descending === undefined) descending = true;
-        let toSort = Object.keys(this.props.data).map(name => {
-            return {
-                name: name,
-                val: this.props.data[name][i]
-            };
-        });
-        toSort.sort((left, right) => descending ? left.val < right.val : left.val > right.val);
-        toSort = toSort.slice(0, this.maxItems);
-        const maxVal = Math.max.apply(Math, toSort.map(item => item.val));
-        return [toSort.reduce((ret, item, idx) => ({
-            ...ret, ...{ [item.name]: idx }
-        }), {}), maxVal];
-    }
-
-    getInfoFromRank = name => {
-        const currIdx = this.state.idx;
-        const prevIdx = (currIdx > 0 ? currIdx - 1 : 0);
-        const value = this.props.data[name][currIdx];
-        const hidden = (this.state.currRank[name] === undefined);
-        const currStyle = {
-            ...this.props.barStyle,
-            marginTop: `calc(${this.state.currRank[name]} * ${this.barHeight})`,
-            width: `${100 * this.props.data[name][currIdx] / this.state.maxVal}%`,
-            backgroundColor: this.props.colors[name],
-        };
-        const prevStyle = {
-            ...this.props.barStyle,
-            marginTop: `calc(${this.state.prevRank[name]} * ${this.barHeight})`,
-            width: `${100 * this.props.data[name][prevIdx] / this.state.maxVal}%`,
-            backgroundColor: this.props.colors[name],
-        };
-        return [value, hidden, currStyle, prevStyle];
-    }
 
     render() {
         return (
-            <div>
-                <div className="barChartRace-title">
-                    {this.props.timeline[this.state.idx]}
-                </div>
-                <div>
-                    {
-                        Object.keys(this.props.data).map(name => {
-                            const [value, hidden, currStyle, prevStyle] = this.getInfoFromRank(name);
-                            if (hidden) return (<div key={name}></div>);
-                            return (
-                                <Bar
-                                    name={name}
-                                    value={value}
-                                    label={this.props.labels[name]}
-                                    currStyle={currStyle}
-                                    prevStyle={prevStyle}
-                                    key={name}
-                                    timeout={this.props.timeout}
-                                    textBoxStyle={this.props.textBoxStyle}
-                                    width={this.props.width}
-                                />
-                            )
-                        })
+            <div style={{ width: 50 + "%" }}>
+                < Bar
+                    data={state}
+                    options={{
+                        title: {
+                            display: true,
+                            text: '2020 Agency Budget',
+                            fontSize: 20
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
                     }
-                </div>
-                <button onClick={this.handleRaceButtonClick}>Start Race!</button>
-            </div>
+                    }
+                />
+            </div >
         );
     }
 }

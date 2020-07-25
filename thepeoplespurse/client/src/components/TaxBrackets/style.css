@@ -1,26 +1,17 @@
-#tax1,
-#tax2,
-#tax3,
-#tax4,
-#tax5,
-#tax6,
-#tax7 {
-    padding:25px;
+.tax {
+    padding: 25px;
     margin: 16px;
     align-content: center;
     position: relative;
     border: 2px solid #100d4a;
     border-radius: 12px;
-    font-size:25px;
+    font-size: 25px;
     font-family: 'Rowdies', cursive;
 }
 
-.tax-title{
-    font-size:57px;
+.tax-title {
+    font-size: 57px;
     font-family: 'Rowdies', cursive;
-    margin:10px;
-    padding:10px;
-
+    margin: 10px;
+    padding: 10px;
 }
-
-
