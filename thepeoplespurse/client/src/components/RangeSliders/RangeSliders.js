@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
-import Input from '@material-ui/core/Input';
 import "./style.css";
 
 const useStyles = makeStyles({
@@ -111,7 +110,7 @@ export default function InputSlider() {
 
   const [value19, setValue19] = React.useState(2);
   const handleSliderChange19 = (event, newValue19) => {
-    setValue18(newValue19);
+    setValue19(newValue19);
   };
 
   const [value20, setValue20] = React.useState(3);
@@ -128,13 +127,13 @@ export default function InputSlider() {
   const handleSliderChange22 = (event, newValue22) => {
     setValue22(newValue22);
   };
-  const handleBlur = () => {
-    if (value < 0) {
-      setValue(0);
-    } else if (value > 100) {
-      setValue(100);
-    }
-  };
+  // const handleBlur = () => {
+  //   if (value < 0) {
+  //     setValue(0);
+  //   } else if (value > 100) {
+  //     setValue(100);
+  //   }
+  // };
 
   return (
     <>

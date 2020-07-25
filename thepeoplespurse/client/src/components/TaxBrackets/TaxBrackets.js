@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import "./style.css";
 
 class TaxBrackets extends Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
-        this.state = { 
+        this.state = {
             tax_bracket_count: '',
         }
     }
@@ -18,7 +17,7 @@ class TaxBrackets extends Component {
             allBrackets[i].classList.remove('active')
         }
         selected.classList.add("active");
-        
+
     }
     render() {
         return (

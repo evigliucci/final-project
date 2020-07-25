@@ -9,30 +9,7 @@ class DeptDropdown extends Component {
           <button className="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Get Information for a Government Agency
   </button>
-          <div className="dropdown-menu">
-            <a className="dropdown-item" id="019" href="#">Dept of State</a>
-            <a className="dropdown-item" id="097" href="#">Dept of Defense</a>
-            <a className="dropdown-item" id="089" href="#">Dept of Energy</a>
-            <a className="dropdown-item" id="1601" href="#">Dept of Labor</a>
-            <a className="dropdown-item" id="012" href="#">Dept of Agriculture</a>
-            <a className="dropdown-item" id="070" href="#">Dept of Homeland Security</a>
-            <a className="dropdown-item" id="069" href="#">Dept of Transportation</a>
-            <a className="dropdown-item" id="013" href="#">Dept of Commerce</a>
-            <a className="dropdown-item" id="091" href="#">Dept of Education</a>
-            <a className="dropdown-item" id="075" href="#">Dept of Health and Human Services</a>
-            <a className="dropdown-item" id="086" href="#">Dept of Housing and Urban Development</a>
-            <a className="dropdown-item" id="015" href="#">Dept of Justice</a>
-            <a className="dropdown-item" id="014" href="#">Dept of the Interior</a>
-            <a className="dropdown-item" id="020" href="#">Dept of the Treasury</a>
-            <a className="dropdown-item" id="068" href="#">Environmental Protection Agency</a>
-            <a className="dropdown-item" id="027" href="#">Federal Communication Comission</a>
-            <a className="dropdown-item" id="360" href="#">Federal Election Comission</a>
-            <a className="dropdown-item" id="029" href="#">Federal Trade Comission</a>
-            <a className="dropdown-item" id="045" href="#">Equal Employment Opportunity Comission</a>
-            <a className="dropdown-item" id="028" href="#">Social Security</a>
-            <div className="dropdown-divider"></div>
-            <a className="dropdown-item" id="getAll" href="#">Get Information for All Agencies</a>
-          </div>
+
         </div>
 
 
@@ -45,7 +22,7 @@ class DeptDropdown extends Component {
             </div>
             <p className="mb-1">Short description /mission populated from API call</p>
             <p>Budget Amount</p>
-            <p href="">link to website of dept</p>
+            <p>link to website of dept</p>
             {/* <!-- Button trigger modal --> */}
             <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
               Agency Specific Budget
