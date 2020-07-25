@@ -18,18 +18,7 @@ class TaxBrackets extends Component {
             allBrackets[i].classList.remove('active')
         }
         selected.classList.add("active");
-        const bracketObject = {
-            tax_bracket_count: event.target.id
-        }
-
-        axios.post('http://localhost:3000/vote', bracketObject)
-            .then((res) => {
-                console.log(res.data)
-            }).catch((error) =>{
-                console.log(error)
-            });
-
-        this.setState({ tax_bracket_count:' '});
+        
     }
     render() {
         return (

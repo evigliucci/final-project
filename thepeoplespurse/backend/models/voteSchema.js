@@ -6,44 +6,43 @@ const voteSchema = new Schema({
     //need to autoincrement each time a button is clicked to vote
     vote_count: {
         type: Number,
-        required: true
-    },
+        required: false    },
     //need to autoincrement the respective number in the array when a tax bracket is clicked
     tax_bracket_count: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false        
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     //percentage is tallied via the corresponding tax bracket assigned
@@ -51,37 +50,37 @@ const voteSchema = new Schema({
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
 
@@ -89,783 +88,782 @@ const voteSchema = new Schema({
        // bracket_1, 
        {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_2, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_3, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_4, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_5, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_6
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_7 
     {
         type: Number,
-        required: true,
+        required: false
     }
     ],
     defense: [
        // bracket_1, 
        {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_2, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_3, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_4, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_5, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_6
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_7 
     {
         type: Number,
-        required: true,
+        required: false
     }
     ],
     energy: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     education: [
        // bracket_1, 
        {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_2, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_3, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_4, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_5, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_6
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_7 
     {
         type: Number,
-        required: true,
+        required: false
     }
     ],
     health_human_services: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     homeland_security: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     interior: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     labor: [
        // bracket_1, 
        {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_2, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_3, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_4, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_5, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_6
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_7 
     {
         type: Number,
-        required: true,
+        required: false
     }
     ],
     state: [
        // bracket_1, 
        {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_2, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_3, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_4, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_5, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_6
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_7 
     {
         type: Number,
-        required: true,
+        required: false
     }
     ],
     transportation: [
        // bracket_1, 
        {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_2, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_3, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_4, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_5, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_6
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_7 
     {
         type: Number,
-        required: true,
+        required: false
     }
     ],
     treasury: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     environmental_protection: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     communication: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     election: [
        // bracket_1, 
        {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_2, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_3, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_4, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_5, 
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_6
     {
         type: Number,
-        required: true,
+        required: false
     },
     // bracket_7 
     {
         type: Number,
-        required: true,
+        required: false
     }
     ],
     trade: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     housing_urban_development: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     social: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     justice: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     NASA: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     veterans_affairs: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ],
     equal_employment: [
         // bracket_1, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_2, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_3, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_4, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_5, 
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_6
         {
             type: Number,
-            required: true,
+            required: false
         },
         // bracket_7 
         {
             type: Number,
-            required: true,
+            required: false
         }
     ]
 },
     {
-        timestamps: true
-    },{
+        timestamps: false    },{
         collection: 'budgetVotes'
     });
 

@@ -8,9 +8,18 @@ class VoteBtn extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    // const taxBracket = document.querySelector(".active").id;
-    //console.log("taxBracket = " + taxBracket)
-
+    let taxBracket = parseInt(document.querySelector(".active").id);
+    console.log("taxBracket = " + taxBracket)
+    let bracketObject = {
+      tax_bracket_count: taxBracket
+  }
+    axios.post('/taxBracket', bracketObject)
+            .then((res) => {
+                console.log(res.data)
+            }).catch((error) =>{
+                console.log(error)
+            });
+    this.setState({ tax_bracket_count:' '});
     function populateDepts() {
       const voteSelect = document.querySelectorAll('input');
       const voteValues = [];
@@ -18,6 +27,7 @@ class VoteBtn extends Component {
         //console.log(voteSelect[i].value)
         voteValues.push(voteSelect[i].value);
       }
+      
       console.log(voteValues);
 
       // const agriculture = document.querySelectorAll("#DoA input")[0].value;

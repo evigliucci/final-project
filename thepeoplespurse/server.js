@@ -11,16 +11,30 @@ const { response } = require('express');
 const { create } = require('./backend/models/voteSchema');
 const router = express.Router();
 
-mongoose.Promise = global.Promise;
-mongoose.connect(database.db, {
-  useNewUrlParser: true
-}).then(() => {
-    console.log('Database connected successfully')
-},
-  error => {
-    console.log('Database could not be connected : ' + error)
-  }
-)
+//defines the db
+const dbRoute = 
+  'mongodb://localhost:27017/thepeoplespurse';
+
+// connects back end code with the database
+mongoose.connect(dbRoute, {useNewUrlParser: true});
+
+let db = mongoose.connection;
+
+db.once('open', () => console.log('connected to database'));
+
+//checks if connection with db is successful
+db.on('error', console.error.bind(console, 'MongoDB connection error'));
+
+// mongoose.Promise = global.Promise;
+// mongoose.connect(database.db, {
+//   useNewUrlParser: true
+// }).then(() => {
+//     console.log('Database connected successfully')
+// },
+//   error => {
+//     console.log('Database could not be connected : ' + error)
+//   }
+// )
 
 
 
@@ -57,6 +71,20 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
 
+app.post('/taxBracket', (req,res) => {
+  const bracket = {id};
+  console.log(bracket);
+  console.log(db);
+
+  db.collection('budgetVotes').save(id, (err, result) => {
+    if (err) {
+      return console.log(err);
+    }
+    console.log('bracket added to db');
+    res.sendStatus(201);
+  });
+});
+
 
 // // Send every other request to the React app
 // // Define any API routes before this runs
@@ -66,19 +94,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 
-// //defines the db
-// const dbRoute = 
-//   'mongodb://localhost:27017/thepeoplespurse?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false';
 
-// // connects back end code with the database
-// mongoose.connect(dbRoute, {useNewUrlParser: true});
-
-// let db = mongoose.connection;
-
-// db.once('open', () => console.log('connected to database'));
-
-// //checks if connection with db is successful
-// db.on('error', console.error.bind(console, 'MongoDB connection error'));
 
 // //bodyParser, parses the request body to be a readable json format
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -112,16 +128,3 @@ if (process.env.NODE_ENV === "production") {
 // // launch our backend into a port
 // app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
 
-// app.post('/BudgetVoting', (req,res) => {
-//   const bracket = {id};
-//   console.log(bracket);
-//   console.log(db);
-
-//   db.collection('budgetVotes').save(id, (err, result) => {
-//     if (err) {
-//       return console.log(err);
-//     }
-//     console.log('bracket added to db');
-//     res.sendStatus(201);
-//   });
-// });
