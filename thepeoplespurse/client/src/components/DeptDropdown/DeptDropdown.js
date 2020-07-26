@@ -6,13 +6,14 @@ class DeptDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'Please Select a Department',
+      value: 'Department of State',
       name: 'Department of State',
       year: '2020',
       abbr: 'DOS',
       icon: 'DOS.jpg',
       mission: 'The Departments mission is to shape and sustain a peaceful, prosperous, just, and democratic world and foster conditions for stability and progress for the benefit of the American people and people everywhere.This mission is shared with the USAID, ensuring we have a common path forward in partnership as we invest in the shared security and prosperity that will ultimately better prepare us for the challenges of tomorrow.',
-      website: 'https://www.state.gov/'
+      website: 'https://www.state.gov/',
+      code: "019",
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -38,19 +39,21 @@ class DeptDropdown extends Component {
 
   updateAgencyContent = (response) => {
     const results = response.data;
+    console.log(results)
     this.setState({
       name: results.name,
       year: results.fiscal_year,
       abbr: results.abbreviation,
       icon: results.icon_filename,
       mission: results.mission,
-      website: results.website
+      website: results.website,
+      code: results.toptier_code
     })
   }
 
   render() {
     return (
-      <div>
+      <div className="deptDrop">
         <select value={this.state.value} onChange={this.handleChange}>
           <option defaultValue value="019" id="019">Dept of State</option>
           <option value="097" id="097">Dept of Defense</option>
@@ -75,16 +78,11 @@ class DeptDropdown extends Component {
         </select>
 
         <section>
-          <h2>{this.state.name}</h2>
-          <h3>{this.state.abbr}</h3>
-          <p>{this.state.mission}</p>
-          <p>{this.state.year}</p>
-          <p>This department id number is {this.state.value}</p>
-          <a href={this.state.website} target="_balnk">{this.state.website}</a>
-          <div>
-            <h3>Agency Budget Breakdown</h3>
-            <p>This body will be populated with a budget breakdown of each agency by it's components</p>
-          </div>
+          <h2>{this.state.name} ({this.state.abbr})</h2>
+          <p className="code">The {this.state.name}'s Top Tier Code is {this.state.code}</p>
+          <p className="year">The fiscal year is {this.state.year}</p>
+          <p className="mission">{this.state.mission}</p>
+          <p className="link">Visit agency website for more info at <a href={this.state.website} target="_balnk"> {this.state.website}</a></p>
         </section>
       </div>
     )
