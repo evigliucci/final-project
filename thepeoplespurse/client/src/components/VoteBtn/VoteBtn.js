@@ -8,10 +8,10 @@ class VoteBtn extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    let taxBracket = parseInt(document.querySelector(".active").id);
-    console.log("taxBracket = " + taxBracket)
-    let bracketObject = {
-      tax_bracket_count: taxBracket
+    const taxBracket = parseInt(document.querySelector(".active").id);
+    console.log(taxBracket)
+    const bracketObject = { 
+      taxBracket
   }
     axios.post('/taxBracket', bracketObject)
             .then((res) => {
