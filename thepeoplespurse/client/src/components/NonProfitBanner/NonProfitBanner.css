@@ -4,7 +4,7 @@
   padding: 120px 100px;
 }
 
-h3 {
+.NonProfitBanner h3 {
   font-family: "Roboto Slab", serif;
   font-size: 36px;
   color: #fff;
@@ -13,12 +13,12 @@ h3 {
   margin: 0 auto 80px;
 }
 
-.NonProfitBannerBtns {
+.NonProfitBanner .NonProfitBannerBtns {
   margin: 0 auto;
   width: 660px;
 }
 
-.button {
+.NonProfitBanner .button {
   margin: 20px;
 }
 /*# sourceMappingURL=NonProfitBanner.css.map */

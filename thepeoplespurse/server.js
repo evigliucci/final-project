@@ -6,24 +6,21 @@ const logger = require('morgan');
 let database = require('./backend/db');
 const voteRoutes = require('./routes/voteRoutes');
 const voteSchema = require('./backend/models/voteSchema');
-const id = require('./client/src/components/TaxBrackets');
+//const id = require('./client/src/components/TaxBrackets');
 const { response } = require('express');
 const { create } = require('./backend/models/voteSchema');
 const router = express.Router();
 
-//defines the db
-const dbRoute = 
-  'mongodb://localhost:27017/thepeoplespurse';
 
 // connects back end code with the database
-mongoose.connect(dbRoute, {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/thepeoplespurse', { useNewUrlParser: true });
 
-let db = mongoose.connection;
+let connection = mongoose.connection;
 
-db.once('open', () => console.log('connected to database'));
+connection.once('open', () => console.log('connected to database'));
 
 //checks if connection with db is successful
-db.on('error', console.error.bind(console, 'MongoDB connection error'));
+connection.on('error', console.error.bind(console, 'MongoDB connection error'));
 
 // mongoose.Promise = global.Promise;
 // mongoose.connect(database.db, {
@@ -41,7 +38,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error'));
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    extended: true
+  extended: true
 }));
 app.use(cors());
 app.use('/vote', voteRoutes)
@@ -58,7 +55,7 @@ app.use((req, res, next) => {
 
 app.use(function (err, req, res, next) {
   console.error(err.message);
-  if(!err.statusCode) err.statusCode = 500;
+  if (!err.statusCode) err.statusCode = 500;
   res.status(err.statusCode).send(err.message);
 });
 
@@ -71,8 +68,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
 
-app.post('/taxBracket', (req,res) => {
-  const bracket = {id};
+app.post('/taxBracket', (req, res) => {
+  const bracket = { id };
   console.log(bracket);
   console.log(db);
 
