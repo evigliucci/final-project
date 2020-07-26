@@ -5,6 +5,7 @@ import BudgetResults from "./pages/BudgetResults";
 import BudgetVoting from "./pages/BudgetVoting";
 import DeptInfo from "./pages/DeptInfo";
 import Navbar from "./components/Navbar/Navbar.js";
+import Footer from "./components/Footer/Footer"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route exact path="/BudgetResults" component={BudgetResults} />
       <Route exact path="/BudgetVoting" component={BudgetVoting} />
       <Route exact path="/DeptInfo" component={DeptInfo} />
+      <Footer></Footer>
     </Router>
   );
 }

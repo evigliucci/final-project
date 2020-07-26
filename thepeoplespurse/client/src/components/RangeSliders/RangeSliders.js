@@ -1,18 +1,72 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import "./style.css";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: 550,
+    width: 300 + theme.spacing(3) * 2,
   },
-  input: {
-    width: 420,
+  margin: {
+    height: theme.spacing(3),
   },
-});
+}));
+
+const iOSBoxShadow =
+  '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)';
+
+const IOSSlider = withStyles({
+  root: {
+    color: '#3880ff',
+    height: 2,
+    padding: '15px 0',
+  },
+  thumb: {
+    height: 28,
+    width: 28,
+    backgroundColor: '#fff',
+    boxShadow: iOSBoxShadow,
+    marginTop: -14,
+    marginLeft: -14,
+    '&:focus, &:hover, &$active': {
+      boxShadow: '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)',
+      // Reset on touch devices, it doesn't add specificity
+      '@media (hover: none)': {
+        boxShadow: iOSBoxShadow,
+      },
+    },
+  },
+  active: {},
+  valueLabel: {
+    left: 'calc(-50% + 12px)',
+    top: -22,
+    '& *': {
+      background: 'transparent',
+      color: '#000',
+    },
+  },
+  track: {
+    height: 2,
+  },
+  rail: {
+    height: 2,
+    opacity: 0.5,
+    backgroundColor: '#bfbfbf',
+  },
+  mark: {
+    backgroundColor: '#bfbfbf',
+    height: 8,
+    width: 1,
+    marginTop: -3,
+  },
+  markActive: {
+    opacity: 1,
+    backgroundColor: 'currentColor',
+  },
+})(Slider);
+
 
 export default function InputSlider() {
   const classes = useStyles();
@@ -143,7 +197,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               id="DoA"
               value={typeof value === 'number' ? value : 0}
               onChange={handleSliderChange}
@@ -159,7 +214,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value2 === 'number' ? value2 : 0}
               onChange={handleSliderChange2}
               aria-labelledby="input-slider"
@@ -174,7 +230,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value3 === 'number' ? value3 : 0}
               onChange={handleSliderChange3}
               aria-labelledby="input-slider"
@@ -189,7 +246,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value4 === 'number' ? value4 : 0}
               onChange={handleSliderChange4}
               aria-labelledby="input-slider"
@@ -204,7 +262,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value5 === 'number' ? value5 : 0}
               onChange={handleSliderChange5}
               aria-labelledby="input-slider"
@@ -219,7 +278,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value6 === 'number' ? value6 : 0}
               onChange={handleSliderChange6}
               aria-labelledby="input-slider"
@@ -234,7 +294,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value7 === 'number' ? value7 : 0}
               onChange={handleSliderChange7}
               aria-labelledby="input-slider"
@@ -249,7 +310,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value8 === 'number' ? value8 : 0}
               onChange={handleSliderChange8}
               aria-labelledby="input-slider"
@@ -264,7 +326,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value9 === 'number' ? value9 : 0}
               onChange={handleSliderChange9}
               aria-labelledby="input-slider"
@@ -279,7 +342,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value10 === 'number' ? value10 : 0}
               onChange={handleSliderChange10}
               aria-labelledby="input-slider"
@@ -294,7 +358,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value11 === 'number' ? value11 : 0}
               onChange={handleSliderChange11}
               aria-labelledby="input-slider"
@@ -309,7 +374,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value12 === 'number' ? value12 : 0}
               onChange={handleSliderChange12}
               aria-labelledby="input-slider"
@@ -324,7 +390,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value13 === 'number' ? value13 : 0}
               onChange={handleSliderChange13}
               aria-labelledby="input-slider"
@@ -339,7 +406,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value14 === 'number' ? value14 : 0}
               onChange={handleSliderChange14}
               aria-labelledby="input-slider"
@@ -354,7 +422,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               value={typeof value15 === 'number' ? value15 : 0}
               onChange={handleSliderChange15}
               aria-labelledby="input-slider"
@@ -370,7 +439,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               id="FTC"
               value={typeof value16 === 'number' ? value16 : 0}
               onChange={handleSliderChange16}
@@ -387,7 +457,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               id="HUD"
               value={typeof value17 === 'number' ? value17 : 0}
               onChange={handleSliderChange17}
@@ -404,7 +475,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               id="SS"
               value={typeof value18 === 'number' ? value18 : 0}
               onChange={handleSliderChange18}
@@ -421,7 +493,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               id="DOJ"
               value={typeof value19 === 'number' ? value19 : 0}
               onChange={handleSliderChange19}
@@ -438,7 +511,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               id="NASA"
               value={typeof value20 === 'number' ? value20 : 0}
               onChange={handleSliderChange20}
@@ -455,7 +529,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               id="DOVA"
               value={typeof value21 === 'number' ? value21 : 0}
               onChange={handleSliderChange21}
@@ -472,7 +547,8 @@ export default function InputSlider() {
       </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs>
-            <Slider
+            <IOSSlider
+              aria-label="ios slider"
               id="EOEC"
               value={typeof value22 === 'number' ? value22 : 0}
               onChange={handleSliderChange22}
