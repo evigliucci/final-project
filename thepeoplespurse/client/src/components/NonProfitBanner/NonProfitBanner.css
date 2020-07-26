@@ -1,24 +1,27 @@
 .NonProfitBanner {
-  background: url(../../assets/images/bg-dc.jpg);
+  background: url(../../assets/images/bg-dc.png);
   background-size: cover;
   padding: 120px 100px;
+  font-family: "Roboto Slab", serif;
 }
 
 .NonProfitBanner h3 {
-  font-family: "Roboto Slab", serif;
-  font-size: 36px;
+  font-size: 42px;
   color: #fff;
-  width: 68%;
+  width: 75%;
   text-align: center;
   margin: 0 auto 80px;
 }
 
-.NonProfitBanner .NonProfitBannerBtns {
-  margin: 0 auto;
-  width: 660px;
+.NonProfitBanner p {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
 }
 
-.NonProfitBanner .button {
-  margin: 20px;
+.NonProfitBanner strong {
+  display: block;
+  font-size: 42px;
+  font-weight: 700;
 }
 /*# sourceMappingURL=NonProfitBanner.css.map */

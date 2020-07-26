@@ -1,5 +1,6 @@
 .navbar {
-  border-bottom: 1px solid #051b41;
+  border-bottom: 1px solid #11a8bd;
+  padding: 0.5rem 100px;
 }
 
 .navbar .navbar-nav ul {
@@ -18,10 +19,10 @@
 }
 
 .navbar .navbar-nav ul li a {
-  color: #051b41;
+  color: #11a8bd;
 }
 
 .navbar .navbar-nav ul li a:hover {
-  color: #d72647;
+  color: #176fa6;
 }
 /*# sourceMappingURL=Navbar.css.map */

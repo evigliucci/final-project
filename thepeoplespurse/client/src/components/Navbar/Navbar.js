@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Navbar.css"
-import logo from '../../assets/images/logo-peoples-purse.jpg';
+import logo from '../../assets/images/logo-peoples-purse.png';
 
 function Navbar() {
   return (

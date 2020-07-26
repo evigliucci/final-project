@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import "./style.css";
 import API from "../../utils/axiosCalls";
-let name = "";
-let year = "";
-let abbr = "";
-let icon = "";
-let mission = "";
-let website = "";
-
 
 class DeptDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
       value: 'Please Select a Department',
-      name: '',
+      name: 'Department of State',
+      year: '2020',
+      abbr: 'DOS',
+      icon: 'DOS.jpg',
+      mission: 'The Departments mission is to shape and sustain a peaceful, prosperous, just, and democratic world and foster conditions for stability and progress for the benefit of the American people and people everywhere.This mission is shared with the USAID, ensuring we have a common path forward in partnership as we invest in the shared security and prosperity that will ultimately better prepare us for the challenges of tomorrow.',
+      website: 'https://www.state.gov/'
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -53,12 +51,8 @@ class DeptDropdown extends Component {
   render() {
     return (
       <div>
-
-
-
         <select value={this.state.value} onChange={this.handleChange}>
-          <option defaultValue value="select">Please Select a Department</option>
-          <option value="019" id="019">Dept of State</option>
+          <option defaultValue value="019" id="019">Dept of State</option>
           <option value="097" id="097">Dept of Defense</option>
           <option value="089" id="089">Dept of Energy</option>
           <option value="1601" id="1601">Dept of Labor</option>
@@ -85,6 +79,7 @@ class DeptDropdown extends Component {
           <h3>{this.state.abbr}</h3>
           <p>{this.state.mission}</p>
           <p>{this.state.year}</p>
+          <p>This department id number is {this.state.value}</p>
           <a href={this.state.website} target="_balnk">{this.state.website}</a>
           <div>
             <h3>Agency Budget Breakdown</h3>
