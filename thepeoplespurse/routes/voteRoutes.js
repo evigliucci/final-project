@@ -2,18 +2,21 @@ let mongoose = require('mongoose'),
     express = require('express'),
     router = express.Router();
 
-let vote = require('../backend/models/voteSchema');
+let db = require('../backend/models/voteSchema');
 const { response } = require('express');
 
-router.route('/vote').post((req, res, next) => {
-    vote.create(req.body, (error, data) => {
+
+router.post('/taxBracket', (req, res) => {
+    vote.create({
+        data: req.body,
+     }, (error, data) => {
         if (error) {
             return next(error)
         } else {
             console.log(data)
             res.json(data)
         }
-    })
+    });
 });
 
 router.route('/update/:dept').put((req, res, next) => {

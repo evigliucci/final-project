@@ -11,7 +11,6 @@ const Footer = props => {
                 <li><Link to="/DeptInfo">Educational Information</Link></li>
                 <li><Link to="/BudgetVoting">Voting</Link></li>
                 <li><Link to="/BudgetResults">Proposed Budget</Link></li>
-                <Link to={props.link}>{props.tileButton}</Link>
             </ul>
         </footer>
     )

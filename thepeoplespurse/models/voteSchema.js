@@ -862,10 +862,11 @@ const voteSchema = new Schema({
         }
     ]
 },
-    {
-        timestamps: false    },{
+    { timestamps: false    },
+        {
         collection: 'budgetVotes'
     });
 
-    module.exports = mongoose.model('Vote', voteSchema);
+    const Vote = mongoose.model('Vote', voteSchema);
+    module.exports = Vote;
 

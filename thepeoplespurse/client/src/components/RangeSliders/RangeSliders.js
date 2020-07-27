@@ -3,11 +3,11 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
-import "./style.css";
+import "./RangeSliders.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 300 + theme.spacing(3) * 2,
+    width: 500,
   },
   margin: {
     height: theme.spacing(3),
@@ -19,17 +19,17 @@ const iOSBoxShadow =
 
 const IOSSlider = withStyles({
   root: {
-    color: '#3880ff',
+    color: '#11A8BD',
     height: 2,
     padding: '15px 0',
   },
   thumb: {
-    height: 28,
-    width: 28,
+    height: 30,
+    width: 30,
     backgroundColor: '#fff',
-    boxShadow: iOSBoxShadow,
-    marginTop: -14,
-    marginLeft: -14,
+    border: '1px solid',
+    marginTop: -11,
+    marginLeft: 0,
     '&:focus, &:hover, &$active': {
       boxShadow: '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)',
       // Reset on touch devices, it doesn't add specificity
@@ -41,17 +41,18 @@ const IOSSlider = withStyles({
   active: {},
   valueLabel: {
     left: 'calc(-50% + 12px)',
-    top: -22,
+    top: 7,
+    fontSize: 16,
     '& *': {
       background: 'transparent',
       color: '#000',
     },
   },
   track: {
-    height: 2,
+    height: 8,
   },
   rail: {
-    height: 2,
+    height: 8,
     opacity: 0.5,
     backgroundColor: '#bfbfbf',
   },
