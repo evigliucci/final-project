@@ -13,27 +13,9 @@ class VoteBtn extends Component {
     let bracketObject = {
       taxBracket
     }
-    fetch('/taxBracket', {
-      method: 'POST',
-      data: {
-        bracketObject
-      }
-    })
-      .then((res) => {
-        console.log(res.data)
-      }).catch((error) => {
-        console.log(error)
-      });
-    this.setState({ tax_bracket_count: ' ' });
-    function populateDepts() {
-      const voteSelect = document.querySelectorAll('input');
-      const voteValues = [];
-      for (var i = 0; i < voteSelect.length; i++) {
-        //console.log(voteSelect[i].value)
-        voteValues.push(voteSelect[i].value);
-      }
-    }
-    populateDepts();
+    axios.post("/api/vote", {taxBracket: taxBracket})
+      .then(data => console.log(data));
+   
   }
   render() {
     return (
