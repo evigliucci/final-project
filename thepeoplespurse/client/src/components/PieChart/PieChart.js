@@ -16,7 +16,7 @@ const state = {
     ],
     datasets: [
         {
-            label: 'Rainfall',
+            label: '2020 Federal Budget',
             backgroundColor: [
 
                 '#124e73',
