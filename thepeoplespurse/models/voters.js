@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Voter = sequelize.define("Voter", {
+    var Voter = sequelize.define("voter", {
         tax_bracket: {
             type: DataTypes.INTEGER,
             allowNull: false
@@ -7,9 +7,9 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     //Voter association
-    Voter.associate = function (models) {
-        Voter.hasOne(models.Vote);
-    }
+    // Voter.associate = function (models) {
+    //     Voter.hasOne(models.Vote);
+    // }
 
     return Voter;
 };

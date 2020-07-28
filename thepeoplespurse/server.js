@@ -8,6 +8,7 @@ const router = express.Router();
 const routes = require("./routes");
 const db = require('./models');
 var app = express();
+var sequelize = require('sequelize');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -32,12 +33,3 @@ db.sequelize.sync().then(function(){
   });
 });
 
-//inserts voter into db
-app.post('/', (req, res) => {
-  let data = {tax_bracket: req.body.data.taxBracket};
-  let sql = "INSERT INTO voters SET ?";
-  connection.query(sql, data, (err, results) => {
-    if(err) throw err;
-    res.redirect('/');
-  });
-});

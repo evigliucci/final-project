@@ -3,7 +3,7 @@ const db = require('../../models');
 
 router.get('/', (req, res) => {
     db.connect();
-    db.query('SELECT * FROM vote', (err, results) => {
+    db.query('SELECT * FROM budget', (err, results) => {
         if (err) {
             db.end();
             res.sendStatus(500);

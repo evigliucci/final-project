@@ -11,7 +11,7 @@ class VoteBtn extends Component {
     let taxBracket = parseInt(document.querySelector(".active").id);
     console.log("taxBracket = " + taxBracket)
   
-    axios.post("/api/voter", {taxBracket: taxBracket})
+    axios.post("/api/voter", {taxBracket})
       .then(data => console.log(data));
     
     let agriculture = document.querySelector("#DoA > input[type=hidden]").value;
