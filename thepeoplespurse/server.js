@@ -6,6 +6,7 @@ const logger = require('morgan');
 const { response } = require('express');
 const router = express.Router();
 const routes = require("./routes");
+const db = require('./models');
 var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -25,6 +26,9 @@ connection.connect();
 
 app.use(routes)
 
-app.listen(3001, function(){
-  console.log('app listening on port 3001!');
+db.sequelize.sync().then(function(){
+  app.listen(3001, function(){
+    console.log('app listening on port 3001!');
+  });
 });
+
