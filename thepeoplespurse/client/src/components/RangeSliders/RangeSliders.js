@@ -209,7 +209,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoC">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of Commerce
       </Typography>
@@ -217,6 +217,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoC"
               value={typeof value2 === 'number' ? value2 : 0}
               onChange={handleSliderChange2}
               aria-labelledby="input-slider"
@@ -225,7 +226,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoD">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of Defense
       </Typography>
@@ -233,6 +234,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoD"
               value={typeof value3 === 'number' ? value3 : 0}
               onChange={handleSliderChange3}
               aria-labelledby="input-slider"
@@ -241,7 +243,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoE">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of Energy
       </Typography>
@@ -249,6 +251,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoE"
               value={typeof value4 === 'number' ? value4 : 0}
               onChange={handleSliderChange4}
               aria-labelledby="input-slider"
@@ -257,7 +260,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoEd">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of Education
       </Typography>
@@ -265,6 +268,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoEd"
               value={typeof value5 === 'number' ? value5 : 0}
               onChange={handleSliderChange5}
               aria-labelledby="input-slider"
@@ -273,7 +277,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoHHS">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of Health and Human Services
       </Typography>
@@ -281,6 +285,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoHHS"
               value={typeof value6 === 'number' ? value6 : 0}
               onChange={handleSliderChange6}
               aria-labelledby="input-slider"
@@ -289,7 +294,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoHS">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of Homeland Security
       </Typography>
@@ -297,6 +302,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoHS"
               value={typeof value7 === 'number' ? value7 : 0}
               onChange={handleSliderChange7}
               aria-labelledby="input-slider"
@@ -305,7 +311,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoI">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of the Interior
       </Typography>
@@ -313,6 +319,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoI"
               value={typeof value8 === 'number' ? value8 : 0}
               onChange={handleSliderChange8}
               aria-labelledby="input-slider"
@@ -321,7 +328,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoL">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of Labor
       </Typography>
@@ -329,6 +336,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoL"
               value={typeof value9 === 'number' ? value9 : 0}
               onChange={handleSliderChange9}
               aria-labelledby="input-slider"
@@ -337,7 +345,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoS">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of State
       </Typography>
@@ -345,6 +353,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoS"
               value={typeof value10 === 'number' ? value10 : 0}
               onChange={handleSliderChange10}
               aria-labelledby="input-slider"
@@ -353,7 +362,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoT">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of Transportation
       </Typography>
@@ -361,6 +370,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoT"
               value={typeof value11 === 'number' ? value11 : 0}
               onChange={handleSliderChange11}
               aria-labelledby="input-slider"
@@ -369,7 +379,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="DoTr">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Department of Treasury
       </Typography>
@@ -377,6 +387,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="DoTr"
               value={typeof value12 === 'number' ? value12 : 0}
               onChange={handleSliderChange12}
               aria-labelledby="input-slider"
@@ -385,7 +396,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="EPA">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Environmental Protection Agency
       </Typography>
@@ -393,6 +404,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="EPA"
               value={typeof value13 === 'number' ? value13 : 0}
               onChange={handleSliderChange13}
               aria-labelledby="input-slider"
@@ -401,7 +413,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="FCC">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Federal Communication Comission
       </Typography>
@@ -409,6 +421,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="FCC"
               value={typeof value14 === 'number' ? value14 : 0}
               onChange={handleSliderChange14}
               aria-labelledby="input-slider"
@@ -417,7 +430,7 @@ export default function InputSlider() {
           </Grid>
         </Grid>
       </div>
-      <div className={classes.root} id="FEC">
+      <div className={classes.root} >
         <Typography id="input-slider" gutterBottom>
           Federal Election Comission
       </Typography>
@@ -425,6 +438,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
+              id="FEC"
               value={typeof value15 === 'number' ? value15 : 0}
               onChange={handleSliderChange15}
               aria-labelledby="input-slider"
@@ -496,7 +510,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
-              id="DOJ"
+              id="DoJ"
               value={typeof value19 === 'number' ? value19 : 0}
               onChange={handleSliderChange19}
               aria-labelledby="input-slider"
@@ -532,7 +546,7 @@ export default function InputSlider() {
           <Grid item xs>
             <IOSSlider
               aria-label="ios slider"
-              id="DOVA"
+              id="DoVA"
               value={typeof value21 === 'number' ? value21 : 0}
               onChange={handleSliderChange21}
               aria-labelledby="input-slider"
