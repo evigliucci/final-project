@@ -21,7 +21,7 @@ fs
     })
     .forEach(function (file) {
         var model = require(path.join(__dirname, file))(sequelize, Sequelize)
-        sequelize[model.name] = model;
+        db[model.name] = model;
     });
 
 Object.keys(db).forEach(function (modelName) {

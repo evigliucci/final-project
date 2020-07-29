@@ -2,91 +2,91 @@ module.exports = function(sequelize, DataTypes) {
     var Budget = sequelize.define("Budget", {
         agriculture:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         commerce: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         communication: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         defense: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         education: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         election: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         energy: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         environmental_protection: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         equal_employment: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         health_human_services: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         homeland_security: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         housing_urban_development: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         interior: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         justice: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         labor: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         nasa: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         social: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         state: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         trade: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         transportation: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         treasury: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         veterans_affairs: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         }
     });
 
