@@ -3,12 +3,13 @@ const express = require('express');
 let cors = require('cors');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
-const { response } = require('express');
+const { response, query } = require('express');
 const router = express.Router();
 const routes = require("./routes");
 const db = require('./models');
 var app = express();
 var sequelize = require('sequelize');
+const votes = require('./models/votes');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -33,3 +34,11 @@ db.sequelize.sync().then(function(){
   });
 });
 
+//route for pulling data
+app.get('/', function (req, res) {
+  connection.query('SELECT * FROM votes', function(error, results, fields)
+  {
+    if (error) throw error;
+    res.end(JSON.parse(results));
+  });
+});

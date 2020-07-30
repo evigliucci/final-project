@@ -10,10 +10,10 @@ class VoteBtn extends Component {
   handleClick() {
     let taxBracket = parseInt(document.querySelector(".active").id);
     console.log("taxBracket = " + taxBracket)
-  
-    axios.post("/api/voter", {taxBracket})
+
+    axios.post("/api/voter", { taxBracket })
       .then(data => console.log(data));
-    
+
     let agriculture = parseInt(document.querySelector("#DoA > input[type=hidden]").value);
     let commerce = parseInt(document.querySelector("#DoC > input[type=hidden]").value);
     let defense = parseInt(document.querySelector("#DoD > input[type=hidden]").value);
@@ -36,16 +36,23 @@ class VoteBtn extends Component {
     let nasa = parseInt(document.querySelector("#NASA > input[type=hidden]").value);
     let veterans = parseInt(document.querySelector("#DoVA > input[type=hidden]").value);
     let equal_employment = parseInt(document.querySelector("#EOEC > input[type=hidden]").value);
-    
+
     var depts = [];
     depts.push(agriculture, commerce, communication, defense, education, election, energy, environmental_protection, equal_employment, health_human_services, homeland_security, housing_urban_development, interior, justice, labor, nasa, social, state, trade, transportation, treasury, veterans);
-    
-    axios.post("/api/vote", {depts})
-      .then(data => console.log(data));
 
-      axios.post("api/budget", {depts})
-      .then(data => console.log(data));
-   
+    var config = { min: 0, max: 100 };
+
+    console.log(depts.reduce((a, b) => a + b, 0))
+
+    if ((depts.reduce((a, b) => a + b, 0)) <= 100) {
+      axios.post("/api/vote", { depts })
+        .then(data => console.log(data));
+    } else {
+      const over = depts.reduce((a, b) => a + b, 0) - 100;
+      
+        alert("Holy guacamole your budget is over by " + over)
+    }
+
   }
   render() {
     return (

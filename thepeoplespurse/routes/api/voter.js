@@ -21,13 +21,14 @@ router.post('/voter', function(req, res) {
 
 // router.get('/voter', (req, res) => {
 //     db.connect();
-//     db.query('SELECT * FROM voter', (err, results) => {
+//     db.query('SELECT * FROM Voter', (err, results) => {
 //         if (err) {
 //             db.end();
 //             res.sendStatus(500);
 //             return console.log(err);
 //         }
 //         res.json(results);
+//         console.log(results);
 //         return db.end();
 //     })
 // })
