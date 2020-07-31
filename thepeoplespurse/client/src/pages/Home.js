@@ -9,11 +9,11 @@ const Home = () => {
     <main>
       <NonProfitBanner />
       <section className="chartArea contentWrap">
-        <h3>This spending chart lets you see the top 10 tiers of the federal budget in granularity, illustrating how awards derive from federal accounts. 74% of the budget belongs to just the top 4 agencies. That equates to $3.544 trillion, only leaving $1.25 trillion to be divided among the remaining 133 independent executive agencies. </h3>
+        <h3>74% of the budget belongs to the top 4 agencies.  This equates to 3.5 trillion dollars.  Leaving 1.2 trillion to be divided among the remaining independent executive agencies.  Illustrated thus in the provided chart.</h3>
         <PieChart></PieChart>
       </section>
       <div className="tiles contentWrap">
-        
+
         <Tile
           classNames="tile blue"
           icon="icon-education"
