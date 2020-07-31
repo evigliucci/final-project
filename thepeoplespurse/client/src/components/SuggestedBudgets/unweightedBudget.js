@@ -2,7 +2,6 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import "./suggestedBudgets.css";
 import axios from "axios";
-import DeptDropdown from "../DeptDropdown/DeptDropdown";
 
 
 export default class UnweightedBudget extends React.Component {
@@ -33,7 +32,7 @@ export default class UnweightedBudget extends React.Component {
         "#F2B138",
         "#F9A23E",
         "#F29829",
-        
+
         "#124E73",
         "#176FA6",
         "#11A8BD",
@@ -88,7 +87,7 @@ export default class UnweightedBudget extends React.Component {
         const transportation = [];
         const treasury = [];
         const veterans_affairs = [];
-        
+
         //for loop that grabs each of the values of depts
         for (var i = 0; i < votes.length; i++) {
 
@@ -164,17 +163,18 @@ export default class UnweightedBudget extends React.Component {
         const transportationAvg = transportationTotal / votes.length
         const treasuryAvg = treasuryTotal / votes.length
         const veterans_affairsAvg = veterans_affairsTotal / votes.length
-        
+
         //pushing arrays to state so they can be used in our chart
         const newArr = [agAvg, commerceAvg, communicateAvg, defenseAvg, educationAvg, electionAvg, energyAvg, environmental_protectionAvg, equal_employmentAvg, health_human_servicesAvg, homeland_securityAvg, housingAvg, interiorAvg, justiceAvg, laborAvg, nasaAvg, socialAvg, stateAvg, tradeAvg, transportationAvg, treasuryAvg, veterans_affairsAvg];
-        
+
         //updates the state with our new array of data
         this.setState({
           datasets: [
             {
-          data: newArr
-        }
-      ]})
+              data: newArr
+            }
+          ]
+        })
 
       })
   }
