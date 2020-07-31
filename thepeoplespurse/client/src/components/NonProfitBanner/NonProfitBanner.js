@@ -1,6 +1,5 @@
 import React from "react";
 import "./NonProfitBanner.css";
-import { Link } from "react-router-dom";
 
 function Jumbotron() {
     return (
