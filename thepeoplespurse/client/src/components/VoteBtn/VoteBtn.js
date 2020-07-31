@@ -8,11 +8,9 @@ class VoteBtn extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    let taxBracket = parseInt(document.querySelector(".active").id);
-    console.log("taxBracket = " + taxBracket)
-
-    axios.post("/api/voter", { taxBracket })
-      .then(data => console.log(data));
+   let taxBracket = parseInt(document.querySelector(".active").id);
+   axios.post("/api/voter", { taxBracket })
+   .then(data => console.log(data)); 
 
     let agriculture = parseInt(document.querySelector("#DoA > input[type=hidden]").value);
     let commerce = parseInt(document.querySelector("#DoC > input[type=hidden]").value);
@@ -40,7 +38,7 @@ class VoteBtn extends Component {
     var depts = [];
     depts.push(agriculture, commerce, communication, defense, education, election, energy, environmental_protection, equal_employment, health_human_services, homeland_security, housing_urban_development, interior, justice, labor, nasa, social, state, trade, transportation, treasury, veterans);
 
-    var config = { min: 0, max: 100 };
+    
 
     console.log(depts.reduce((a, b) => a + b, 0))
 

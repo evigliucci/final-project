@@ -13,15 +13,7 @@ const Home = () => {
         <PieChart></PieChart>
       </section>
       <div className="tiles contentWrap">
-        <Tile
-          classNames="tile teal"
-          icon="icon-about"
-          tileTitle="About Us"
-          tileText="Come see more about ThePeoplesPurse, how we got started, and ways you can help."
-          link="/"
-          tileButton="Read More"
-        />
-
+        
         <Tile
           classNames="tile blue"
           icon="icon-education"

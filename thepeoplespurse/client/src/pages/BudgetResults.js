@@ -3,22 +3,14 @@ import UnweightedBudget from "../components/SuggestedBudgets/unweightedBudget.js
 import WeightedBudget from "../components/SuggestedBudgets/weightedBudget.js";
 import NavTabs from "../components/SuggestedBudgets/SuggestedBudgetTabs";
 import "../assets/styles/budgetResults.css";
-import axios from "axios";
+
 
 class BudgetResults extends Component {
   state = {
     currentChart: "UnweightedBudget"
   };
 
-  componentDidMount() {
-    axios.get('/api/vote/get')
-      .then(res => {
-        const votes = res.data;
-        console.log(res);
-        this.setState({ votes });
-        console.log(votes);
-      })
-  }
+  
 
   handleChartChange = chart => {
     this.setState({ currentChart: chart });

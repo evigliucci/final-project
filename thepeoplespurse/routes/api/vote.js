@@ -47,8 +47,13 @@ router.post('/vote', function(req, res) {
 router.get('/vote/get', (req, res) => {
   db.Vote.findAll()
   .then(votes => {
+    //manipulate votes
+    
+
+    //res.json (whatever result you want it has to be object)
     res.json(votes)
     console.log(votes);
+    
   })
     .catch(err => {
       res.json(err)
