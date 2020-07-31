@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Tile.css"
-import logo from '../../assets/images/logo-peoples-purse.png';
 import { Link } from "react-router-dom";
 
 const Tile = props => {
