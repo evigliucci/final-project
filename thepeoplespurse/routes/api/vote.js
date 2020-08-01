@@ -4,8 +4,7 @@ const sequelize = require("sequelize");
 const votes = require("../../models/votes");
 
 //posting routes for dept values in the database
-router.post('/vote', function(req, res) {
-    console.log(req.body.depts[7])
+router.post('/vote', function (req, res) {
     const ag = req.body.depts[0]
     db.Vote.create({
         agriculture: req.body.depts[0],
@@ -45,21 +44,14 @@ router.post('/vote', function(req, res) {
 
 //route for retrieving the data before we push it into our chart
 router.get('/vote/get', (req, res) => {
-  db.Vote.findAll()
-  .then(votes => {
-    //manipulate votes
-    
-
-    //res.json (whatever result you want it has to be object)
-    res.json(votes)
-    console.log(votes);
-    
-  })
-    .catch(err => {
-      res.json(err)
-    })
+    db.Vote.findAll()
+        .then(votes => {
+            //manipulate votes
+            res.json(votes)
+        })
+        .catch(err => {
+            res.json(err)
+        })
 });
-
-
 
 module.exports = router;
