@@ -37,7 +37,7 @@ const Home = () => {
           icon="icon-data"
           tileTitle="Data Results"
           tileText="Looking to view the collected voting results for the current fiscal year?"
-          link="/BudgetVoting"
+          link="/BudgetResults"
           tileButton="View Data"
         />
       </div>
