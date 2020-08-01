@@ -1,6 +1,5 @@
 import React from 'react';
 import DeptDropdown from "../components/DeptDropdown/DeptDropdown.js";
-// import DeptPopulate from "../components/DeptDropdown/DeptPopulate.js";
 import "../assets/styles/departInfo.css";
 import library from "../assets/images/library.png";
 
