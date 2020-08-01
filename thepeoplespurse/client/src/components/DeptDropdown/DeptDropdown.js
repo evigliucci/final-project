@@ -39,7 +39,6 @@ class DeptDropdown extends Component {
 
   updateAgencyContent = (response) => {
     const results = response.data;
-    console.log(results)
     this.setState({
       name: results.name,
       year: results.fiscal_year,
