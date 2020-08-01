@@ -57,10 +57,7 @@ export default class UnweightedBudget extends React.Component {
     axios.get('/api/vote/get')
       .then(res => {
         const votes = res.data;
-        console.log(res);
         this.setState({ votes });
-        console.log(votes);
-        console.log(votes.length);
 
         //data manipulation piece
 
@@ -180,7 +177,6 @@ export default class UnweightedBudget extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="suggestedSpending-unweighted">
         <Doughnut
