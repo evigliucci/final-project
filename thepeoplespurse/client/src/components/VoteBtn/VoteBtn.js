@@ -48,6 +48,8 @@ class VoteBtn extends Component {
       alert("Holy guacamole your budget is over by " + over)
     }
 
+
+    document.location.href='/BudgetResults'
   }
   render() {
     return (
