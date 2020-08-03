@@ -8,9 +8,18 @@ class VoteBtn extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    let taxBracket = parseInt(document.querySelector(".active").id);
+
+    if (document.querySelector(".active")) {
+      let taxBracket = parseInt(document.querySelector(".active").id);
     axios.post("/api/voter", { taxBracket })
       .then(data => console.log(data));
+    }
+    else {
+      alert("Slow your horses there, let's make sure to select a tax bracket first")
+    }
+      
+    
+    
 
     let agriculture = parseInt(document.querySelector("#DoA > input[type=hidden]").value);
     let commerce = parseInt(document.querySelector("#DoC > input[type=hidden]").value);
