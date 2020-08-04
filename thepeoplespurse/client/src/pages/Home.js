@@ -9,7 +9,7 @@ const Home = () => {
     <main>
       <NonProfitBanner />
       <section className="chartArea contentWrap">
-        <h3>74% of the budget belongs to the top 4 agencies.  This equates to 3.5 trillion dollars.  Leaving 1.2 trillion to be divided among the remaining independent executive agencies.  Illustrated thus in the provided chart.</h3>
+        <h3>74% of the budget, or roughly 3.5 trillion dollars, belongs to the Departments of Defense, Social Security, Treasury, and Health & Human Services. The remaining 1.2 trillion is divided among the other independent executive agencies; this is illustrated in the provided chart.</h3>
         <PieChart></PieChart>
       </section>
       <div className="tiles contentWrap">
