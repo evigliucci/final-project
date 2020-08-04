@@ -9,6 +9,7 @@ class VoteBtn extends Component {
   }
   handleClick() {
 
+
     if (document.querySelector(".active")) {
       let taxBracket = parseInt(document.querySelector(".active").id);
     axios.post("/api/voter", { taxBracket })
@@ -16,11 +17,11 @@ class VoteBtn extends Component {
     }
     else {
       alert("Slow your horses there, let's make sure to select a tax bracket first")
-    }
-      
-    
-    
+      return;
 
+    }
+    
+ 
     let agriculture = parseInt(document.querySelector("#DoA > input[type=hidden]").value);
     let commerce = parseInt(document.querySelector("#DoC > input[type=hidden]").value);
     let defense = parseInt(document.querySelector("#DoD > input[type=hidden]").value);
@@ -51,14 +52,15 @@ class VoteBtn extends Component {
     if ((depts.reduce((a, b) => a + b, 0)) <= 100) {
       axios.post("/api/vote", { depts })
         .then(data => console.log(data));
+        document.location.href='/BudgetResults'
     } else {
       const over = depts.reduce((a, b) => a + b, 0) - 100;
 
       alert("Holy guacamole your budget is over by " + over)
+      return;
+
     }
-
-
-    document.location.href='/BudgetResults'
+    
   }
   render() {
     return (
