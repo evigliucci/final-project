@@ -1,10 +1,9 @@
 const router = require("express").Router();
 const db = require('../../models');
-const sequelize = require("sequelize");
-const votes = require("../../models/votes");
 
 //posting routes for dept values in the database
 router.post('/vote', function (req, res) {
+     
     const ag = req.body.depts[0]
     db.Vote.create({
         agriculture: req.body.depts[0],

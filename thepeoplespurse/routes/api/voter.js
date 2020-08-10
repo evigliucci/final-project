@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const db = require('../../models');
-const sequelize = require("sequelize");
 
+//posting route for the tax brackets
 router.post('/voter', function (req, res) {
     db.Voter.create({ tax_bracket: req.body.taxBracket })
         .then(data => {
@@ -14,6 +14,6 @@ router.post('/voter', function (req, res) {
             })
         })
     res.json(req.body.taxBracket)
-})
+});
 
 module.exports = router
